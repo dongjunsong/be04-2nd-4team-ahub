@@ -1,10 +1,10 @@
-package com.teampheonix.ahubmember;
+package com.teamphoenix.fairnews;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AhubMemberApplicationTests {
+class AhubFairAndNewsApplicationTests {
 
 	@Test
 	void contextLoads() {
