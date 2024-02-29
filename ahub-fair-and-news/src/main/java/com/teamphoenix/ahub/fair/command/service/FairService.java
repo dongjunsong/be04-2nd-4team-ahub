@@ -15,7 +15,6 @@ public class FairService {
 
     private final FairRepository fairRepository;
     private final ModelMapper  modelMapper;
-
     @Autowired
     public FairService(FairRepository fairRepository, ModelMapper modelMapper) {
         this.fairRepository = fairRepository;
@@ -25,7 +24,8 @@ public class FairService {
     @Transactional
     public void registFairPost(FairDTO fairInfo) {
 
-        log.info("ModelMapper 동작 확인 : {}", modelMapper.map(fairInfo, Fair.class));
+        System.out.println("fairInfo = " + fairInfo);
+//        log.info("ModelMapper 동작 확인 : {}", modelMapper.map(fairInfo, Fair.class));
         fairRepository.save(modelMapper.map(fairInfo, Fair.class));
 
     }
