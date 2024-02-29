@@ -21,6 +21,12 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	// dependency 추가
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	annotationProcessor 'org.projectlombok:lombok'			// 로그 출력시 @Slf4j 어노테이션 사용
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'		// @Entity 사용
 }
 
 tasks.named('test') {
