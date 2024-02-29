@@ -14,7 +14,7 @@ public class MemberController {
     }
 
     public void findAllmembers() {
-        
+
 
     }
 }
