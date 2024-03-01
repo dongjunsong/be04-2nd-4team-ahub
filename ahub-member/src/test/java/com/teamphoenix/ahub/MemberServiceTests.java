@@ -68,7 +68,7 @@ public class MemberServiceTests {
         );
     }
 
-    @DisplayName("회원 아이디로 회원 조회")
+    @DisplayName("회원 아이디로 조회")
     @ParameterizedTest
     @MethodSource("getMemberId")
     void testSelectByMemberId(String memberId){
