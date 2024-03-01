@@ -1,7 +1,8 @@
-package com.teamphoenix.ahubmember;
+package com.teamphoenix.ahub;
 
-import com.teamphoenix.ahubmember.query.dto.MemberDTO;
-import com.teamphoenix.ahubmember.query.service.MemberService;
+import com.teamphoenix.ahub.query.dto.MemberDTO;
+import com.teamphoenix.ahub.query.service.MemberService;
+import org.apache.ibatis.annotations.Arg;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,16 +22,16 @@ public class MemberServiceTests {
     private MemberService memberService;
 
     static Stream<Arguments> getMemberCode() {
-        return Stream.of(Arguments.of(Map.of("memberCode", "1")),
-                        Arguments.of(Map.of("memberCode", "2")),
-                        Arguments.of(Map.of("memberCode", "3"))
+        return Stream.of(Arguments.of("1"),
+                        Arguments.of("2"),
+                        Arguments.of("3")
                 );
     }
 
     static Stream<Arguments> getMemberId() {
-        return Stream.of(Arguments.of(Map.of("memberId", "admin")),
-                Arguments.of(Map.of("memberId", "user01")),
-                Arguments.of(Map.of("memberId", "user02"))
+        return Stream.of(Arguments.of("admin"),
+                Arguments.of("user01"),
+                Arguments.of("user02")
         );
     }
 
@@ -38,6 +39,12 @@ public class MemberServiceTests {
         return Stream.of(Arguments.of(new MemberDTO(1, "admin", "관리자", "admin01", "user01@gmail.com", "서울시 동작구", "010-1111-1111", 0,1)),
                 Arguments.of(new MemberDTO(2, "user01", "손세림", "pass01", "user02@gmail.com", "서울시 구로구", "010-2222-2222", 0,2)),
                 Arguments.of(new MemberDTO(3, "user02", "송동준", "pass02", "user03@gmail.com", "서울시 광진구", "010-3333-3333", 0,2))
+        );
+    }
+
+    static Stream<Arguments> getMemberProfile() {
+        return Stream.of(Arguments.of(new MemberDTO("user01", "손세림", "pass01", "user02@gmail.com", "서울시 구로구", "010-2222-2222")),
+                Arguments.of(new MemberDTO("user02", "송동준", "pass02", "user03@gmail.com", "서울시 광진구", "010-3333-3333"))
         );
     }
 
@@ -53,7 +60,7 @@ public class MemberServiceTests {
     @DisplayName("회원 코드로 회원 조회")
     @ParameterizedTest
     @MethodSource("getMemberCode")
-    void testSelectByMemberCode(Map<String, String> memberCode){
+    void testSelectByMemberCode(String memberCode){
         Assertions.assertDoesNotThrow(
                 () -> memberService.selectByMemberCode(memberCode)
         );
@@ -62,18 +69,18 @@ public class MemberServiceTests {
     @DisplayName("회원 아이디로 회원 조회")
     @ParameterizedTest
     @MethodSource("getMemberId")
-    void testㄴelectByMemberId(Map<String, String> memberId){
+    void testSelectByMemberId(String memberId){
         Assertions.assertDoesNotThrow(
                 () -> memberService.selectByMemberId(memberId)
         );
     }
 
-    @DisplayName("회원 아이디로 회원 조회")
+    @DisplayName("회원 프로필 조회")
     @ParameterizedTest
-    @MethodSource("getMemberId")
-    void testelectByMemberId(Map<String, String> memberId){
+    @MethodSource("getMemberCode")
+    void testSelectMyprofile(String memberCode){
         Assertions.assertDoesNotThrow(
-                () -> memberService.selectByMemberId(memberId)
+                () -> memberService.selectMyprofile(memberCode)
         );
     }
 }
