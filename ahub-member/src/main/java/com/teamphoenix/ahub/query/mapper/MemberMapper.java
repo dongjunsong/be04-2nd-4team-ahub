@@ -1,6 +1,7 @@
 package com.teamphoenix.ahub.query.mapper;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
+import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -14,7 +15,8 @@ public interface MemberMapper {
 
     MemberDTO selectByMemberId(Map<String, String> memberId);
 
-    MemberDTO selectMyprofile(Map<String, Integer> memberCode);
+    MemberDTO selectMyprofile(Map<String, String> memberId);
 
-    MemberDTO memberLogin(Map<String, String> memberId, Map<String, String> memberPwd);
+    MemberDTO memberLogin(Map<String, String> memberLogin);
+
 }

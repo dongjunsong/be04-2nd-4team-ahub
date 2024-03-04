@@ -85,14 +85,16 @@
             , MEMBER_EMAIL
             , MEMBER_ADDR
             , MEMBER_PHONE
+            , RESTRICT_START_DATE
          FROM MEMBER_INFO
-        WHERE MEMBER_CODE = #{ memberCode }
+        WHERE MEMBER_ID = #{ memberId }
     </select>
-    <select id="memberLogin" resultMap="memberResult" parameterType="String">
+
+    <select id="memberLogin" resultMap="memberResult" parameterType="map">
         SELECT
               MEMBER_NAME
             , MEMBER_ID
          FROM MEMBER_INFO
-        WHERE MEMBER_ID LIKE # { memberID } AND MEMBER_PWD LIKE #{ member_pwd }
+        WHERE MEMBER_ID = #{ memberId } AND MEMBER_PWD = #{ memberPwd }
     </select>
 </mapper>
