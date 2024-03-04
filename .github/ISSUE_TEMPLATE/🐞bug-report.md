@@ -10,8 +10,7 @@ assignees: ''
 ## Description
 설명을 작성하세요.
 
-## To-do
-- [ ] TODO
-- [ ] TODO
+## Error Message
+<!-- 에러 메세지 캡쳐 or 붙여넣기 -->
 
 ## ETC (선택 사항)
