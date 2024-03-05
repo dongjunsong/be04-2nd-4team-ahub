@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub.common.entity;
+package com.teamphoenix.ahub.command.entity;
 
 
 import java.time.LocalDateTime;
