@@ -1,8 +1,8 @@
 package com.teamphoenix.ahub;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
+import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import com.teamphoenix.ahub.query.service.MemberService;
-import org.apache.ibatis.annotations.Arg;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.params.provider.Arguments;
 
-import java.util.Map;
 import java.util.stream.Stream;
 
 
@@ -22,15 +21,13 @@ public class MemberServiceTests {
     private MemberService memberService;
 
     static Stream<Arguments> getMemberCode() {
-        return Stream.of(Arguments.of("1"),
-                        Arguments.of("2"),
-                        Arguments.of("3")
-                );
+        return Stream.of(Arguments.of("2"),
+                Arguments.of("3")
+        );
     }
 
     static Stream<Arguments> getMemberId() {
-        return Stream.of(Arguments.of("admin"),
-                Arguments.of("user01"),
+        return Stream.of(Arguments.of("user01"),
                 Arguments.of("user02")
         );
     }
@@ -42,9 +39,14 @@ public class MemberServiceTests {
         );
     }
 
-    static Stream<Arguments> getMemberProfile() {
-        return Stream.of(Arguments.of(new MemberDTO("user01", "손세림", "pass01", "user02@gmail.com", "서울시 구로구", "010-2222-2222")),
-                Arguments.of(new MemberDTO("user02", "송동준", "pass02", "user03@gmail.com", "서울시 광진구", "010-3333-3333"))
+    static Stream<Arguments> getCurrentMemberId() {
+        return Stream.of(Arguments.of(new MemberDTO("user01")),
+                Arguments.of(new MemberDTO("user02"))
+        );
+    }
+    static Stream<Arguments> getMemberLoginInfo() {
+        return Stream.of(Arguments.of(new MemberDTO("user01", "pass01")),
+                Arguments.of(new MemberDTO("user02", "pass02"))
         );
     }
 
@@ -57,16 +59,16 @@ public class MemberServiceTests {
         );
     }
 
-    @DisplayName("회원 코드로 회원 조회")
+    @DisplayName("회원 코드로 조회")
     @ParameterizedTest
     @MethodSource("getMemberCode")
-    void testSelectByMemberCode(String memberCode){
+    void testSelectByMemberCode(String inputMemberCode){
         Assertions.assertDoesNotThrow(
-                () -> memberService.selectByMemberCode(memberCode)
+                () -> memberService.selectByMemberCode(inputMemberCode)
         );
     }
 
-    @DisplayName("회원 아이디로 회원 조회")
+    @DisplayName("회원 아이디로 조회")
     @ParameterizedTest
     @MethodSource("getMemberId")
     void testSelectByMemberId(String memberId){
@@ -77,10 +79,19 @@ public class MemberServiceTests {
 
     @DisplayName("회원 프로필 조회")
     @ParameterizedTest
-    @MethodSource("getMemberCode")
-    void testSelectMyprofile(String memberCode){
+    @MethodSource("getCurrentMemberId")
+    void testSelectMyprofile(MemberDTO currentMember){
         Assertions.assertDoesNotThrow(
-                () -> memberService.selectMyprofile(memberCode)
+                () -> memberService.selectMyprofile(currentMember)
+        );
+    }
+
+    @DisplayName("회원 로그인")
+    @ParameterizedTest
+    @MethodSource("getMemberLoginInfo")
+    void testMemberLogin(MemberDTO memberLoginInfo) {
+        Assertions.assertDoesNotThrow(
+                () -> memberService.memberLogin(memberLoginInfo)
         );
     }
 }

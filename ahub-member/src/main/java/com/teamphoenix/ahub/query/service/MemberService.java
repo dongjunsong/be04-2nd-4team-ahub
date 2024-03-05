@@ -1,6 +1,7 @@
 package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
+import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import com.teamphoenix.ahub.query.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,7 @@ public class MemberService {
 
     public List<MemberDTO> selectAllMembers(){
         List<MemberDTO> members = memberMapper.selectAllMembers();
+        System.out.println("전체 회원 목록");
         members.forEach(System.out::println);
 
         return members;
@@ -28,6 +30,7 @@ public class MemberService {
 
     public MemberDTO selectByMemberCode(String inputMemberCode){
         int intMemberCode = Integer.valueOf(inputMemberCode);
+
         Map<String, Integer> memberCode = new HashMap<>();
         memberCode.put("memberCode", intMemberCode);
 
@@ -45,25 +48,27 @@ public class MemberService {
         return member;
     }
 
-    public MemberDTO selectMyprofile(String loggedInMemberCode){
-        int intMemberCode = Integer.valueOf(loggedInMemberCode);
-        Map<String, Integer> memberCode = new HashMap<>();
-        memberCode.put("memberCode", intMemberCode);
+    public MemberDTO selectMyprofile(MemberDTO currentMember){
+        String currentMemberId = currentMember.getMemberId();
 
-        MemberDTO member = memberMapper.selectMyprofile(memberCode);
+        Map<String, String> memberId = new HashMap<>();
+        memberId.put("memberCode", currentMemberId);
+
+        MemberDTO member = memberMapper.selectMyprofile(memberId);
 
         return member;
     }
-    public MemberDTO memberLogin(Map<String, String> memberId, Map<String, String> memberPwd){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("아이디 입력 : ");
-        String id = sc.nextLine().trim();
 
-        System.out.print("비밀번호 입력: ");
-        String pwd = sc.nextLine().trim();
+    /* 설명. @requestBody 방식으로 가져온 data */
+    public MemberDTO memberLogin(MemberDTO memberLoginInfo){
+        String memberId = memberLoginInfo.getMemberId();
+        String memberPwd = memberLoginInfo.getMemberPwd();
 
+        Map<String, String> memberLogin = new HashMap<>();
+        memberLogin.put("memberId", memberId);
+        memberLogin.put("memberPwd", memberPwd);
 
-        MemberDTO member = memberMapper.memberLogin(memberId, memberPwd);
+        MemberDTO member = memberMapper.memberLogin(memberLogin);
 
         return member;
     }

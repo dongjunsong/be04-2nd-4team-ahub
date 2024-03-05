@@ -21,78 +21,80 @@
     </resultMap>
     <select id="selectAllMembers" resultMap="memberResult">
         SELECT
-              MEMBER_CODE
-            , MEMBER_ID
-            , MEMBER_NAME
-            , MEMBER_PWD
-            , MEMBER_EMAIL
-            , MEMBER_ADDR
-            , MEMBER_PHONE
-            , BLACKLIST_STATUS
-            , RESTRICT_START_DATE
-            , RESTRICT_END_DATE
-            , LOGIN_FAIL_COUNT
-            , ACCESS_ACCEPTANCE
-            , WITHDRAWAL_ACCEPTANCE
-            , MEMBER_CATEGORY_ID
-         FROM MEMBER_INFO
+        MEMBER_CODE
+        , MEMBER_ID
+        , MEMBER_NAME
+        , MEMBER_PWD
+        , MEMBER_EMAIL
+        , MEMBER_ADDR
+        , MEMBER_PHONE
+        , BLACKLIST_STATUS
+        , RESTRICT_START_DATE
+        , RESTRICT_END_DATE
+        , LOGIN_FAIL_COUNT
+        , ACCESS_ACCEPTANCE
+        , WITHDRAWAL_ACCEPTANCE
+        , MEMBER_CATEGORY_ID
+        FROM MEMBER_INFO
     </select>
 
     <select id="selectByMemberCode" resultMap="memberResult" parameterType="_int">
         SELECT
-              MEMBER_CODE
-            , MEMBER_ID
-            , MEMBER_NAME
-            , MEMBER_PWD
-            , MEMBER_EMAIL
-            , MEMBER_ADDR
-            , MEMBER_PHONE
-            , BLACKLIST_STATUS
-            , RESTRICT_START_DATE
-            , RESTRICT_END_DATE
-            , LOGIN_FAIL_COUNT
-            , ACCESS_ACCEPTANCE
-            , WITHDRAWAL_ACCEPTANCE
-            , MEMBER_CATEGORY_ID
-         FROM MEMBER_INFO
+        MEMBER_CODE
+        , MEMBER_ID
+        , MEMBER_NAME
+        , MEMBER_PWD
+        , MEMBER_EMAIL
+        , MEMBER_ADDR
+        , MEMBER_PHONE
+        , BLACKLIST_STATUS
+        , RESTRICT_START_DATE
+        , RESTRICT_END_DATE
+        , LOGIN_FAIL_COUNT
+        , ACCESS_ACCEPTANCE
+        , WITHDRAWAL_ACCEPTANCE
+        , MEMBER_CATEGORY_ID
+        FROM MEMBER_INFO
         WHERE MEMBER_CODE = #{ memberCode }
     </select>
 
     <select id="selectByMemberId" resultMap="memberResult" parameterType="String">
         SELECT
-              MEMBER_CODE
-            , MEMBER_ID
-            , MEMBER_NAME
-            , MEMBER_PWD
-            , MEMBER_EMAIL
-            , MEMBER_ADDR
-            , MEMBER_PHONE
-            , BLACKLIST_STATUS
-            , RESTRICT_START_DATE
-            , RESTRICT_END_DATE
-            , LOGIN_FAIL_COUNT
-            , ACCESS_ACCEPTANCE
-            , WITHDRAWAL_ACCEPTANCE
-            , MEMBER_CATEGORY_ID
-         FROM MEMBER_INFO
+        MEMBER_CODE
+        , MEMBER_ID
+        , MEMBER_NAME
+        , MEMBER_PWD
+        , MEMBER_EMAIL
+        , MEMBER_ADDR
+        , MEMBER_PHONE
+        , BLACKLIST_STATUS
+        , RESTRICT_START_DATE
+        , RESTRICT_END_DATE
+        , LOGIN_FAIL_COUNT
+        , ACCESS_ACCEPTANCE
+        , WITHDRAWAL_ACCEPTANCE
+        , MEMBER_CATEGORY_ID
+        FROM MEMBER_INFO
         WHERE MEMBER_ID = #{ memberId }
     </select>
 
     <select id="selectMyprofile" resultMap="memberResult" parameterType="_int">
         SELECT
-              MEMBER_NAME
-            , MEMBER_ID
-            , MEMBER_EMAIL
-            , MEMBER_ADDR
-            , MEMBER_PHONE
-         FROM MEMBER_INFO
-        WHERE MEMBER_CODE = #{ memberCode }
+        MEMBER_NAME
+        , MEMBER_ID
+        , MEMBER_EMAIL
+        , MEMBER_ADDR
+        , MEMBER_PHONE
+        , RESTRICT_START_DATE
+        FROM MEMBER_INFO
+        WHERE MEMBER_ID = #{ memberId }
     </select>
+
     <select id="memberLogin" resultMap="memberResult" parameterType="map">
         SELECT
-              MEMBER_NAME
-            , MEMBER_ID
-         FROM MEMBER_INFO
-        WHERE MEMBER_ID LIKE # { memberID } AND MEMBER_PWD LIKE #{ member_pwd }
+        MEMBER_NAME
+        , MEMBER_ID
+        FROM MEMBER_INFO
+        WHERE MEMBER_ID = #{ memberId } AND MEMBER_PWD = #{ memberPwd }
     </select>
 </mapper>
