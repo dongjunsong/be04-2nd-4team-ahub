@@ -88,7 +88,7 @@
          FROM MEMBER_INFO
         WHERE MEMBER_CODE = #{ memberCode }
     </select>
-    <select id="memberLogin" resultMap="memberResult" parameterType="String">
+    <select id="memberLogin" resultMap="memberResult" parameterType="map">
         SELECT
               MEMBER_NAME
             , MEMBER_ID
