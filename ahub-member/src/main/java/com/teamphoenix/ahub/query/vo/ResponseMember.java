@@ -1,10 +1,14 @@
 package com.teamphoenix.ahub.query.vo;
 
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class ResponseMember {
     private String memberId;
     private String memberName;

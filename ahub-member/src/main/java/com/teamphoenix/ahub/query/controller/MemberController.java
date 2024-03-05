@@ -67,6 +67,8 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
+
+    /* 설명. 회원 로그인에 security 적용하기 */
     @PostMapping("/findLogin")
     public ResponseEntity<ResponseMember> memberLogin(@RequestBody RequestMember login) {
         MemberDTO memberLoginInfo = modelMapper.map(login, MemberDTO.class);

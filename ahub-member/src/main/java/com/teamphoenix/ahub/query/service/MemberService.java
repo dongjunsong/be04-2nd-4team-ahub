@@ -59,6 +59,7 @@ public class MemberService {
         return member;
     }
 
+    /* 설명. @requestBody 방식으로 가져온 data */
     public MemberDTO memberLogin(MemberDTO memberLoginInfo){
         String memberId = memberLoginInfo.getMemberId();
         String memberPwd = memberLoginInfo.getMemberPwd();
