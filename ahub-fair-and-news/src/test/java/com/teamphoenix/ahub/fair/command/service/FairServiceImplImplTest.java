@@ -15,10 +15,10 @@ import java.util.stream.Stream;
 
 
 @SpringBootTest
-class FairServiceTest {
+class FairServiceImplImplTest {
 
     @Autowired
-    private FairService fairService;
+    private FairServiceImpl fairServiceImpl;
 
     static Stream<Arguments> getFairDTO() {
 
@@ -36,7 +36,7 @@ class FairServiceTest {
     void registFairPostTest(FairDTO fairInfo) {
 
         Assertions.assertDoesNotThrow(
-                () -> fairService.registFairPost(fairInfo)
+                () -> fairServiceImpl.registFairPost(fairInfo)
         );
     }
 }
