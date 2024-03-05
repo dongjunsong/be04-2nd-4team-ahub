@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub.fair.command.entity;
+package com.teamphoenix.ahub.fair.command.aggregate;
 
 
 import jakarta.persistence.*;
@@ -28,14 +28,14 @@ public class Fair {
     @Column(name = "fair_content")
     private String fairContent;
 
-    @Column(name = "fair_writedate", columnDefinition = "default NOW()")
+    @Column(name = "fair_writedate")
     @Temporal(TemporalType.TIMESTAMP)
     private java.time.LocalDateTime fairWritedate;
 
     @Column(name = "use_acceptance")
     private int useAcceptance;
 
-    @Column(name = "member_code", columnDefinition = "default 1")
+    @Column(name = "member_code")
     private int memberCode;
 
     public void setFairTitle(String fairTitle) {

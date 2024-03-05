@@ -1,26 +1,21 @@
-package com.teamphoenix.ahub.fair.query.dto;
+package com.teamphoenix.ahub.fair.query.vo;
+
 
 import java.time.LocalDateTime;
 
-public class FairDTO {
+public class ResponseFairPost {
 
     private int fairId;
     private String fairTitle;
     private String fairContent;
     private LocalDateTime fairWritedate;
     private int useAcceptance;
-    private int memberCode;  // fk로 불러온 회원 코드와 매치
+    private int memberCode;
 
-    public FairDTO() {
+    public ResponseFairPost() {
     }
 
-    /* 테스트 케이스(T2) 작성을 위한 DTO 생성자 추가 */
-    public FairDTO(String fairTitle, String fairContent) {
-        this.fairTitle = fairTitle;
-        this.fairContent = fairContent;
-    }
-
-    public FairDTO(int fairId, String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
+    public ResponseFairPost(int fairId, String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
         this.fairId = fairId;
         this.fairTitle = fairTitle;
         this.fairContent = fairContent;
@@ -79,13 +74,13 @@ public class FairDTO {
 
     @Override
     public String toString() {
-        return "FairDTO{" +
+        return "ResponseFairPost{" +
                 "fairId=" + fairId +
                 ", fairTitle='" + fairTitle + '\'' +
                 ", fairContent='" + fairContent + '\'' +
                 ", fairWritedate=" + fairWritedate +
                 ", useAcceptance=" + useAcceptance +
-                ", memberCode='" + memberCode + '\'' +
+                ", memberCode=" + memberCode +
                 '}';
     }
 }
