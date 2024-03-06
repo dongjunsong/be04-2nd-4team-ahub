@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamphoenix.ahub.news.query.mapper.NewsMapper">
+<mapper namespace="com.teamphoenix.ahub.news.query.repository.NewsMapper">
 
     <resultMap id="searchNewsByCondition" type="com.teamphoenix.ahub.news.query.dto.NewsDTO">
         <id property="newsId" column="news_id"/>

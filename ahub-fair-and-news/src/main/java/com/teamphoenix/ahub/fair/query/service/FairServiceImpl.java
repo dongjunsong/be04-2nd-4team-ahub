@@ -1,7 +1,7 @@
 package com.teamphoenix.ahub.fair.query.service;
 
 import com.teamphoenix.ahub.fair.query.dto.FairDTO;
-import com.teamphoenix.ahub.fair.query.mapper.FairMapper;
+import com.teamphoenix.ahub.fair.query.repository.FairMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

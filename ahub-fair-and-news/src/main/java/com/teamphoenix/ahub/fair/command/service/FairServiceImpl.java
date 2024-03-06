@@ -26,20 +26,28 @@ public class FairServiceImpl implements FairService {
     }
 
     @Transactional
-    public void registFairPost(FairDTO fairInfo) {
+    public FairDTO registFairPost(FairDTO fairInfo) {
 
-        fairInfo.setFairWritedate(LocalDateTime.now());
-        fairInfo.setUseAcceptance(1);
-        fairInfo.setMemberCode(1);
-
-        Fair fair = new Fair(fairInfo.getFairTitle(),
+        Fair fair = new Fair(
+                fairInfo.getFairTitle(),
                 fairInfo.getFairContent(),
                 fairInfo.getFairWritedate(),
                 fairInfo.getUseAcceptance(),
                 fairInfo.getMemberCode()) ;
 
         fairRepository.save(fair);
+        fair = fairRepository.findByFairTitle(fairInfo.getFairTitle());
 
+        FairDTO result = new FairDTO(
+                fair.getFairId(),
+                fair.getFairTitle(),
+                fair.getFairContent(),
+                fair.getFairWritedate(),
+                fair.getUseAcceptance(),
+                fair.getMemberCode()
+        );
+
+        return result;
     }
 
     /* 게시글 수정 메소드 */

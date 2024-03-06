@@ -1,14 +1,14 @@
 package com.teamphoenix.ahub.fair.command.vo;
 
-public class RegistFairInfo {
+public class RequestRegist {
 
     private String fairTitle;
     private String fairContent;
 
-    public RegistFairInfo() {
+    public RequestRegist() {
     }
 
-    public RegistFairInfo(String fairTitle, String fairContent) {
+    public RequestRegist(String fairTitle, String fairContent) {
         this.fairTitle = fairTitle;
         this.fairContent = fairContent;
     }

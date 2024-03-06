@@ -14,22 +14,22 @@ spring:
   cloud:
     gateway:
       routes:
-        # Fair Service GET ?? ?? ???
+        # Fair Service GET
         - id: fair-get
           uri: lb://FAIR-AND-NEWS-SERVICE
           predicates:
             - Path=/board/fairs/**
             - Method=GET
           filters:
-            - RewritePath=/board/fairs/(?<segment>.*), /$\{segment}
+            - RewritePath=/board/fairs/(?<segment>.*), /fairs/$\{segment}
 
-        # Fair Service POST, PUT, DELETE ?? ?? ???
+        # Fair Service POST, PUT, DELETE
         - id: fair-modify
           uri: lb://FAIR-AND-NEWS-SERVICE
           predicates:
             - Path=/board/fairs/**
             - Method=POST, PUT, DELETE
           filters:
-            - RewritePath=/board/fairs/(?<segment>.*), /$\{segment}
+            - RewritePath=/board/fairs/(?<segment>.*), /fairs/$\{segment}
 #            - AuthorizationFilter
 
