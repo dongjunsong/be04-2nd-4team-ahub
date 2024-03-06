@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub.query;
+package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
 import com.teamphoenix.ahub.query.service.MemberService;

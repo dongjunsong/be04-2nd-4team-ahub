@@ -19,7 +19,7 @@ public class MemberDTO {
     private int withdrawalAcceptance;
     private int memberCategoryId;
 
-    public MemberDTO() {
+    public MemberDTO(String user04, String pass04, String 테스트, String string, String 서울시_동작구, String s, LocalDateTime now, int i) {
     }
 
     /* 설명. 전체 회원 조회용(관리자) */
