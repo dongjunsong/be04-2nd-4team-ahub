@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub;
+package com.teamphoenix.ahub.query;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
 import com.teamphoenix.ahub.query.dto.SearchCriteria;
