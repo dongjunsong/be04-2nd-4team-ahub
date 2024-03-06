@@ -24,9 +24,9 @@ class FairServiceImplTest {
     static Stream<Arguments> getFairDTO() {
 
         return Stream.of(
-                Arguments.of(new FairDTO("위스키 페어 게시물 등록2", "위스키 페어 게시물을 등록합니다.", null, 0, 0)),
-                Arguments.of(new FairDTO("맥주 페어 게시물 등록3", "맥주 페어 게시물을 등록합니다.", null, 0, 0)),
-                Arguments.of(new FairDTO("와인 페어 게시물 등록4", "와인 페어 게시물을 등록합니다.", null, 0, 0))
+                Arguments.of(new FairDTO("위스키 페어 게시물 등록2", "위스키 페어 게시물을 등록합니다.", LocalDateTime.now(), 1, 1)),
+                Arguments.of(new FairDTO("맥주 페어 게시물 등록3", "맥주 페어 게시물을 등록합니다.", LocalDateTime.now(), 1, 1)),
+                Arguments.of(new FairDTO("와인 페어 게시물 등록4", "와인 페어 게시물을 등록합니다.", LocalDateTime.now(), 1, 1))
         );
     }
 

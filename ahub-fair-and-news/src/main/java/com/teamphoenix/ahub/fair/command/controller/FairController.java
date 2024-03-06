@@ -2,8 +2,8 @@ package com.teamphoenix.ahub.fair.command.controller;
 
 import com.teamphoenix.ahub.fair.command.dto.FairDTO;
 import com.teamphoenix.ahub.fair.command.service.FairService;
-import com.teamphoenix.ahub.fair.command.vo.RegistFairInfo;
-import com.teamphoenix.ahub.fair.command.vo.ResponseUrlMessage;
+import com.teamphoenix.ahub.fair.command.vo.RequestRegist;
+import com.teamphoenix.ahub.fair.command.vo.ResponseStatus;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 
 @RestController(value = "fairCommandController")
-@RequestMapping("/board/fairs")
+@RequestMapping("/fairs")
 public class FairController {
 
     private final FairService fairService;
@@ -28,15 +28,20 @@ public class FairController {
 
     /* 새 게시글 등록 핸들러 메소드 */
     @PostMapping("/new")
-    public ResponseEntity<ResponseUrlMessage> addNewPost(@RequestBody RegistFairInfo postInfo) {
-
+    public ResponseEntity<ResponseStatus> addNewPost(@RequestBody RequestRegist postInfo) {
 
         FairDTO newFairPost = modelMapper.map(postInfo, FairDTO.class);
-        fairService.registFairPost(newFairPost);
+        newFairPost.setFairWritedate(LocalDateTime.now());
+        newFairPost.setUseAcceptance(1);
+        newFairPost.setMemberCode(1);
 
-        ResponseUrlMessage respMessage = new ResponseUrlMessage();
-        respMessage.setMessage("post-list");
-        respMessage.setUrl("/board/fairs/lists");
+        FairDTO result = fairService.registFairPost(newFairPost);
+
+        ResponseStatus respMessage = new ResponseStatus();
+        respMessage.setCode("201, CREATED");
+        respMessage.setMessage("Success to add new post.");
+        respMessage.setUrl("http://localhost:8000/board/fairs/lists");
+        respMessage.setResult(result);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED).body(respMessage);
@@ -44,7 +49,7 @@ public class FairController {
 
     /* 기존 게시글 수정 핸들러 메소드 */
     @PutMapping("/{postNum}")
-    public ResponseEntity<ResponseUrlMessage> modifyFairPost(
+    public ResponseEntity<ResponseStatus> modifyFairPost(
             @PathVariable(value = "postNum") int postNum,
             @RequestBody FairDTO modifyInfo) {
 
@@ -52,24 +57,29 @@ public class FairController {
 
         fairService.modifyFairPost(postNum, modifyInfo);
 
-        ResponseUrlMessage respMessage = new ResponseUrlMessage();
-        respMessage.setMessage("post-list");
-        respMessage.setUrl("/board/fairs/lists");
+        ResponseStatus respMessage = new ResponseStatus();
+        respMessage.setCode("200, OK");
+        respMessage.setMessage("Success to update [ " + postNum + " ] fair post.");
+        respMessage.setUrl("http://localhost:8000/board/fairs/lists");
+        respMessage.setResult(modifyInfo);
 
         return ResponseEntity
-                .status(HttpStatus.CREATED).body(respMessage);
+                .status(HttpStatus.OK).body(respMessage);
 
     }
 
+
     /* 게시글 삭제 */
     @DeleteMapping("/{postNum}")
-    public ResponseEntity<ResponseUrlMessage> removeFairPost(@PathVariable("postNum") int postNum) {
+    public ResponseEntity<ResponseStatus> removeFairPost(@PathVariable("postNum") int postNum) {
 
         fairService.removeFairPost(postNum);
 
-        ResponseUrlMessage respMessage = new ResponseUrlMessage();
-        respMessage.setMessage("post-list");
-        respMessage.setUrl("/board/fairs/lists");
+        ResponseStatus respMessage = new ResponseStatus();
+        respMessage.setCode("200, OK");
+        respMessage.setMessage("Success to delete [ " + postNum + " ] fair post.");
+        respMessage.setUrl("http://localhost:8000/board/fairs/lists");
+
         return ResponseEntity
                 .status(HttpStatus.OK).body(respMessage);
     }

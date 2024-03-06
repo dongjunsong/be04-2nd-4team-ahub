@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub.news.query.mapper;
+package com.teamphoenix.ahub.news.query.repository;
 
 import com.teamphoenix.ahub.news.query.dto.NewsDTO;
 import org.apache.ibatis.annotations.Mapper;
