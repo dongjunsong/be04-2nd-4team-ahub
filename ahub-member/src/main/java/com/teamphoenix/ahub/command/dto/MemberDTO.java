@@ -14,4 +14,5 @@ public class MemberDTO {
     private String memberAddr;
     private String memberPhone;
     private LocalDateTime restrictStartDate;
+    private int memberCategoryId;
 }

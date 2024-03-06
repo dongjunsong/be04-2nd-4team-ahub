@@ -12,6 +12,7 @@ public class RequestMember {
         private String memberId;
         private String memberPwd;
         private String memberName;
+        private String memberEmail;
         private String memberAddr;
         private String memberPhone;
 }

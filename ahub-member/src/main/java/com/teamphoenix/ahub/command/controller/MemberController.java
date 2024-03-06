@@ -11,7 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+import java.time.LocalDateTime;
+
+@RestController("memberController2")
 @RequestMapping("/member")
 @Slf4j
 public class MemberController {
@@ -28,9 +30,13 @@ public class MemberController {
     @PostMapping("/regist")
     public ResponseEntity<ResponseMember> registMember(@RequestBody RequestMember newMember) {
         MemberDTO newMemberInfo = modelMapper.map(newMember, MemberDTO.class);
+        newMemberInfo.setMemberCategoryId(2);
+        newMemberInfo.setRestrictStartDate(LocalDateTime.now());
 
         memberService.registMember(newMemberInfo);
         String newMemberId = newMemberInfo.getMemberId();
+
+        log.info("컨트롤러에서 입력받은 회원가입 정보: {}", newMemberInfo);
 
         ResponseMember responseMember = new ResponseMember();
         responseMember.setMemberId(newMemberId);
