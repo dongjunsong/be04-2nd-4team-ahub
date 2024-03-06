@@ -8,8 +8,5 @@ public interface FairService {
 
     void modifyFairPost(int postNum, FairDTO modifyInfo);
 
-    @Query(value = "SELECT ")
-//@Query(value = "SELECT CATEGORY_CODE, CATEGORY_NAME, REF_CATEGORY_CODE FROM Tbl_Category " +
-//        "ORDER BY CATEGORY_CODE ASC", nativeQuery = true)
     FairDTO registFairPost(FairDTO newFairPost);
 }
