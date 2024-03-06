@@ -1,7 +1,6 @@
 package com.teamphoenix.ahub.query;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import com.teamphoenix.ahub.query.service.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
