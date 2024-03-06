@@ -21,20 +21,20 @@
     </resultMap>
     <select id="selectAllMembers" resultMap="memberResult">
         SELECT
-        MEMBER_CODE
-        , MEMBER_ID
-        , MEMBER_NAME
-        , MEMBER_PWD
-        , MEMBER_EMAIL
-        , MEMBER_ADDR
-        , MEMBER_PHONE
-        , BLACKLIST_STATUS
-        , RESTRICT_START_DATE
-        , RESTRICT_END_DATE
-        , LOGIN_FAIL_COUNT
-        , ACCESS_ACCEPTANCE
-        , WITHDRAWAL_ACCEPTANCE
-        , MEMBER_CATEGORY_ID
+                MEMBER_CODE
+              , MEMBER_ID
+              , MEMBER_NAME
+              , MEMBER_PWD
+              , MEMBER_EMAIL
+              , MEMBER_ADDR
+              , MEMBER_PHONE
+              , BLACKLIST_STATUS
+              , RESTRICT_START_DATE
+              , RESTRICT_END_DATE
+              , LOGIN_FAIL_COUNT
+              , ACCESS_ACCEPTANCE
+              , WITHDRAWAL_ACCEPTANCE
+              , MEMBER_CATEGORY_ID
         FROM MEMBER_INFO
     </select>
 

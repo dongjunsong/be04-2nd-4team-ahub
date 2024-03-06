@@ -1,7 +1,10 @@
 package com.teamphoenix.ahub.query.dto;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class MemberDTO {
     private int memberCode;
     private String memberId;
@@ -18,9 +21,6 @@ public class MemberDTO {
     private int accessAcceptancce;
     private int withdrawalAcceptance;
     private int memberCategoryId;
-
-    public MemberDTO(String user04, String pass04, String 테스트, String string, String 서울시_동작구, String s, LocalDateTime now, int i) {
-    }
 
     /* 설명. 전체 회원 조회용(관리자) */
     public MemberDTO(int memberCode, String memberId, String memberName, String memberPwd, String memberEmail, String memberAddr, String memberPhone, int blacklistStatus, int memberCategoryId) {

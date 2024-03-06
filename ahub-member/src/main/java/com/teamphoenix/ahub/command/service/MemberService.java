@@ -6,7 +6,7 @@ public interface MemberService {
 
     void registMember(MemberDTO newMemberInfo);
 
-    void modifyMember(String memberId, MemberDTO modifyMember);
+    int modifyMember(String memberId, MemberDTO modifyMember);
 
     void removeMember(String memberId);
 }

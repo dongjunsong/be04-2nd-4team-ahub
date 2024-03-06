@@ -47,15 +47,17 @@ public class MemberController {
 
     /* 회원 정보 수정 */
     @PutMapping("/modify/{memberId}")
-    public ResponseEntity<ResponseMember> modifyMember(@PathVariable("memberId") String memberId, @RequestBody RequestMember modifyMemberInfo) {
-        MemberDTO modifyValues = modelMapper.map(modifyMemberInfo, MemberDTO.class);
+    public ResponseEntity<ResponseMember> modifyMember(@PathVariable("memberId") String memberId, @RequestBody MemberDTO modifyMemberInfo) {
+        modifyMemberInfo.setRestrictStartDate(LocalDateTime.now());
+        modifyMemberInfo.setMemberCategoryId(2);
 
-        String CurrentMemberId = modifyValues.getMemberId();
-        memberService.modifyMember(CurrentMemberId, modifyValues);
+        String CurrentMemberId = modifyMemberInfo.getMemberId();
+        int memberCode = memberService.modifyMember(CurrentMemberId, modifyMemberInfo);
+        modifyMemberInfo.setMemberCode(memberCode);
 
         ResponseMember responseMember = new ResponseMember();
         responseMember.setMemberId(CurrentMemberId);
-        responseMember.setMemberId(CurrentMemberId + "님 회원 정보 수정 완료");
+        responseMember.setMessage(CurrentMemberId + "님 회원 정보 수정 완료");
 
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
@@ -66,6 +68,7 @@ public class MemberController {
         memberService.removeMember(memberId);
 
         ResponseMember responseMember = new ResponseMember();
+        responseMember.setMemberId(memberId);
         responseMember.setMessage("회원 탈퇴 완료");
 
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);

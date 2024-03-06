@@ -1,7 +1,6 @@
 package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.service.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -49,7 +48,7 @@ public class MemberServiceTests {
         );
     }
 
-    @DisplayName("전체 회원 조회")
+    @DisplayName("T1 - 전체 회원 조회")
     @ParameterizedTest
     @MethodSource("getMemberInfo")
     void testSelectAllMembers() {
