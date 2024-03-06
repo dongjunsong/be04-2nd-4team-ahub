@@ -1,7 +1,6 @@
 package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import com.teamphoenix.ahub.query.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,6 @@
 package com.teamphoenix.ahub.query.mapper;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
