@@ -62,7 +62,7 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
-    /* 회원 탈퇴 */
+    /* 회원 탈퇴 기능 */
     @DeleteMapping("/remove/{memberId}")
     public ResponseEntity<ResponseMember> removeMember(@PathVariable("memberId") String memberId) {
         memberService.removeMember(memberId);
