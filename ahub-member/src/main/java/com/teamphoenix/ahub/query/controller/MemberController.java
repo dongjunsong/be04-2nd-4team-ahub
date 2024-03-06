@@ -62,7 +62,7 @@ public class MemberController {
         responseMember.setMemberAddr(myProfile.getMemberAddr());
         responseMember.setMemberEmail(myProfile.getMemberEmail());
         responseMember.setMemberPhone(myProfile.getMemberPhone());
-        responseMember.setRestricStartDate(myProfile.getRestrictStartDate());
+        responseMember.setRestrictStartDate(myProfile.getRestrictStartDate());
 
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
