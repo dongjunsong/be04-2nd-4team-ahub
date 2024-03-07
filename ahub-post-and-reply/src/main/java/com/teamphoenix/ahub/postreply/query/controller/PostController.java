@@ -26,7 +26,7 @@ public class PostController {
     @GetMapping("/findPostsByMemberCode")
     public List<PostDTO> findPostsByMemberCode() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("회원 코드 입력: ");
+        System.out.print("회원 코드 입력하여 게시글 조회: ");
         String inputMemberCode = sc.nextLine();
 
         return postService.selectPostsByMemberCode(inputMemberCode);
@@ -35,7 +35,7 @@ public class PostController {
     @GetMapping("/findPostsByLikeId")
     public List<LikePostAndPostDTO> findPostsByLikeId() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("좋아요한 게시글 조회할 회원 아이디를 입력: ");
+        System.out.print("회원 코드 입력하여 좋아요한 게시글 조회: ");
         String inputLikeId = sc.nextLine();
 
         return postService.selectPostsByLikeId(inputLikeId);

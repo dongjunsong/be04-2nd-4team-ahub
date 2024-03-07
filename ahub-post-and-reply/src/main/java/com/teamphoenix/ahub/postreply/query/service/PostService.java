@@ -49,10 +49,7 @@ public class PostService {
         map1.put("postDate", postDate1);
         map1.put("likeAmount", "5");
 
-//        System.out.println("DB 전: " + map1);
         List<PostDTO> postDateList = postMapper.selectDayLikePost(map1);
-//        System.out.println("DB 후: ");
-//        postDateList.forEach(System.out::println);
 
         return postDateList;
     }

@@ -29,7 +29,19 @@ class PostServiceTest {
         );
     }
 
-    @DisplayName("회원 코드로 조회")
+    static Stream<Arguments> getDayLikePost() {
+        return Stream.of(
+                Arguments.of("2024-03-08")
+        );
+    }
+
+    static Stream<Arguments> getMonthLikePost() {
+        return Stream.of(
+                Arguments.of("2024-03")
+        );
+    }
+
+    @DisplayName("회원 코드로 게시글 조회")
     @ParameterizedTest
     @MethodSource("getMemberCode")
     void testSelectByMemberCode(String inputMemberCode){
@@ -38,12 +50,30 @@ class PostServiceTest {
         );
     }
 
-    @DisplayName("좋아요한 회원 아이디로 조회")
+    @DisplayName("회원 코드로 좋아요한 게시글 조회")
     @ParameterizedTest
     @MethodSource("getLikeId")
     void testSelectByLikeId(String inputLikeId){
         Assertions.assertDoesNotThrow(
                 () -> postService.selectPostsByLikeId(inputLikeId)
+        );
+    }
+
+    @DisplayName("오늘자 인기게시글 조회(좋아요 5개 이상)")
+    @ParameterizedTest
+    @MethodSource("getDayLikePost")
+    void testSelectDayLikePost(String inputPostDate){
+        Assertions.assertDoesNotThrow(
+                () -> postService.selectDayLikePost(inputPostDate)
+        );
+    }
+
+    @DisplayName("이달의 인기게시글 조회(좋아요 10개 이상)")
+    @ParameterizedTest
+    @MethodSource("getMonthLikePost")
+    void testSelectMonthLikePost(String inputPostDate){
+        Assertions.assertDoesNotThrow(
+                () -> postService.selectDayLikePost(inputPostDate)
         );
     }
 

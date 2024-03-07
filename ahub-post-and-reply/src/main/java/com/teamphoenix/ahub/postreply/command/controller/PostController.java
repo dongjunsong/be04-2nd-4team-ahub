@@ -44,6 +44,7 @@ public class PostController {
                 .status(HttpStatus.CREATED).body(responseRegist);
     }
 
+
     @DeleteMapping("/{postId}")
     public ResponseEntity<ResponseRegist> removePost(@PathVariable("postId") int postId) {
         postService.removePost(postId);
