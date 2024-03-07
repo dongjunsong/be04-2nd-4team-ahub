@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class ResponseMember {
+public class MyProfileResponseMember {
     private String memberId;
     private String memberName;
     private String memberEmail;
