@@ -31,18 +31,11 @@ public class PostServiceImpl implements PostService {
         postRepository.save(post);
         return newPost;
     }
+
+    @Transactional
+    public void removePost(int postId) {
+        postRepository.deleteById(postId);
+    }
 }
 
-//    @Transactional
-//    public void modifyPost(int postId, PostDTO modifyInfo) {
-//        Post oldPost = postRepository.findById(postId).orElseThrow(IllegalArgumentException::new);
-//        oldPost.setPostTitle(modifyInfo.getPostTitle());
-//        oldPost.setPostContent(modifyInfo.getPostContent());
-//        oldPost.setPostDate(modifyInfo.getPostDate());
-//        oldPost.setPostModifyDate(new Date());
-//    }
-//
-//    public void removePost(int postId) {
-//        postRepository.deleteById(postId);
-//    }
 

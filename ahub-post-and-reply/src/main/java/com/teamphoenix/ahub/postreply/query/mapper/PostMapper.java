@@ -9,8 +9,12 @@ import java.util.Map;
 
 @Mapper
 public interface PostMapper {
-    PostDTO selectPostsByMemberCode(Map<String, Integer> memberCode);
 
-    LikePostAndPostDTO selectPostsByLikeId(Map<String, Integer> likeId);
+    List<PostDTO> selectPostsByMemberCode(Map<String, Integer> memberCode);
 
+    List<LikePostAndPostDTO> selectPostsByLikeId(Map<String, Integer> likeId);
+
+    List<PostDTO> selectDayLikePost(Map<String, String> map1);
+
+    List<PostDTO> selectMonthLikePost(Map<String, String> map2);
 }

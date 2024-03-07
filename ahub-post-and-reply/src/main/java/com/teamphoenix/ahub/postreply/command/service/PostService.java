@@ -6,9 +6,7 @@ public interface PostService {
 
     PostDTO createPost(PostDTO newPost);
 
-//    void removePost(int postId);
-//
-//    void modifyPost(int postId, PostDTO modifyInfo);
+    void removePost(int postId);
 
 
 }

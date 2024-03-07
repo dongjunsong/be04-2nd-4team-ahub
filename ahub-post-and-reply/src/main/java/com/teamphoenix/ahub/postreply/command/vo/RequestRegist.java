@@ -11,5 +11,6 @@ public class RequestRegist {
     private String postTitle;
     private String postContent;
     private int categoryId;
+    private int postId;
 
 }

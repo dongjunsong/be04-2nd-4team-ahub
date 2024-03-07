@@ -85,7 +85,7 @@
         member_code,
         post_modify_date
         FROM post
-        WHERE DAY(post_date) = DAY(#{postDate})
+        WHERE DATEDIFF(post_date, #{postDate}) = 0
         AND like_amount >= #{likeAmount}
     </select>
 
@@ -110,8 +110,8 @@
         member_code,
         post_modify_date
         FROM post
-        WHERE like_amount >= #{likeAmount}
-        AND MONTH(post_date) = MONTH(#{postDate})
+        WHERE DATE_FORMAT(post_date, '%Y-%m') = #{postDate}
+        AND like_amount >= #{likeAmount}
     </select>
 
 </mapper>

@@ -19,7 +19,7 @@ class PostServiceTest {
 
     static Stream<Arguments> getMemberCode() {
         return Stream.of(
-                Arguments.of("2")
+                Arguments.of("3")
         );
     }
 

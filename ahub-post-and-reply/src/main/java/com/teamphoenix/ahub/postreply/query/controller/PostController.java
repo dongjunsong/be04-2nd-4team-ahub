@@ -6,6 +6,9 @@ import com.teamphoenix.ahub.postreply.query.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -21,7 +24,7 @@ public class PostController {
     }
 
     @GetMapping("/findPostsByMemberCode")
-    public PostDTO findPostsByMemberCode() {
+    public List<PostDTO> findPostsByMemberCode() {
         Scanner sc = new Scanner(System.in);
         System.out.print("회원 코드 입력: ");
         String inputMemberCode = sc.nextLine();
@@ -30,12 +33,29 @@ public class PostController {
     }
 
     @GetMapping("/findPostsByLikeId")
-    public LikePostAndPostDTO findPostsByLikeId() {
+    public List<LikePostAndPostDTO> findPostsByLikeId() {
         Scanner sc = new Scanner(System.in);
         System.out.print("좋아요한 게시글 조회할 회원 아이디를 입력: ");
         String inputLikeId = sc.nextLine();
 
         return postService.selectPostsByLikeId(inputLikeId);
     }
+
+    @GetMapping("/findDayLikePost")
+    public List<PostDTO> findDayLikePost() {
+        LocalDate localDate1 = LocalDate.now();
+        String dateFormat1 = localDate1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+        return postService.selectDayLikePost(dateFormat1);
+    }
+
+    @GetMapping("/findMonthLikePost")
+    public List<PostDTO> findMonthLikePost() {
+        LocalDate localDate2 = LocalDate.now();
+        String dateFormat2 = localDate2.format(DateTimeFormatter.ofPattern("yyyy-MM"));
+
+        return postService.selectMonthLikePost(dateFormat2);
+    }
+
 
 }

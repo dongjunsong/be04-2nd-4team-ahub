@@ -1,5 +1,6 @@
 package com.teamphoenix.ahub.postreply.query.dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class PostDTO {
@@ -16,6 +17,7 @@ public class PostDTO {
 
     public PostDTO() {
     }
+
 
     public PostDTO(int postId, String postTitle, String postContent, Date postDate, int categoryId, int useAcceptance, int likeAmount, int reportedAcceptance, int memberCode, Date postModifyDate) {
         this.postId = postId;
@@ -112,7 +114,7 @@ public class PostDTO {
 
     @Override
     public String toString() {
-        return "Post{" +
+        return "PostDTO{" +
                 "postId=" + postId +
                 ", postTitle='" + postTitle + '\'' +
                 ", postContent='" + postContent + '\'' +

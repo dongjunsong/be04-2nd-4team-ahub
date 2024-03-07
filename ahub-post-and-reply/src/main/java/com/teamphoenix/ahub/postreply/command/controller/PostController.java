@@ -44,36 +44,15 @@ public class PostController {
                 .status(HttpStatus.CREATED).body(responseRegist);
     }
 
-//    @PutMapping("/{postId}")
-//    public ResponseEntity<ResponseStatus> modifyPost(
-//            @PathVariable(value = "postId") int postId,
-//            @RequestBody PostDTO modifyInfo) {
-//
-//        modifyInfo.setPostDate(LocalDateTime.now());
-//
-//        postService.modifyPost(postId, modifyInfo);
-//
-//        ResponseStatus respMessage = new ResponseStatus();
-//        respMessage.setCode("200, OK");
-//        respMessage.setMessage("Success to update [ " + postId + " ] post.");
-//        respMessage.setUrl("http://localhost:8000/board/posts/lists");
-//        respMessage.setResult(modifyInfo);
-//
-//        return ResponseEntity
-//                .status(HttpStatus.OK).body(respMessage);
-//    }
-//
-//    @DeleteMapping("/{postId}")
-//    public ResponseEntity<ResponseStatus> removePost(@PathVariable("postId") int postId) {
-//
-//        postService.removePost(postId);
-//
-//        ResponseStatus respMessage = new ResponseStatus();
-//        respMessage.setCode("200, OK");
-//        respMessage.setMessage("Success to delete [ " + postId + " ] post.");
-//        respMessage.setUrl("http://localhost:8000/board/posts/lists");
-//
-//        return ResponseEntity
-//                .status(HttpStatus.OK).body(respMessage);
-//    }
+    @DeleteMapping("/{postId}")
+    public ResponseEntity<ResponseRegist> removePost(@PathVariable("postId") int postId) {
+        postService.removePost(postId);
+
+        ResponseRegist responseRegist = new ResponseRegist();
+        responseRegist.setMessage("Success to delete this post.");
+
+        return ResponseEntity
+                .status(HttpStatus.OK).body(responseRegist);
+    }
+
 }
