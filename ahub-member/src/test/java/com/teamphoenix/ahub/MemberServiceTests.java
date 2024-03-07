@@ -80,9 +80,9 @@ public class MemberServiceTests {
     @DisplayName("회원 프로필 조회")
     @ParameterizedTest
     @MethodSource("getCurrentMemberId")
-    void testSelectMyprofile(MemberDTO currentMember){
+    void testSelectMyprofile(String currentMemberId){
         Assertions.assertDoesNotThrow(
-                () -> memberService.selectMyprofile(currentMember)
+                () -> memberService.selectMyprofile(currentMemberId)
         );
     }
 
