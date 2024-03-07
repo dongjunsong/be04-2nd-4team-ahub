@@ -1,7 +1,10 @@
 package com.teamphoenix.ahub.query.dto;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class MemberDTO {
     private int memberCode;
     private String memberId;
@@ -203,6 +206,5 @@ public class MemberDTO {
                 ", memberCategoryId=" + memberCategoryId +
                 '}';
     }
-
-
 }
+

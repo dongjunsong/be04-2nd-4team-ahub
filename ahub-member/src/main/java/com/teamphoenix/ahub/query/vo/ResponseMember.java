@@ -15,5 +15,6 @@ public class ResponseMember {
     private String memberEmail;
     private String memberAddr;
     private String memberPhone;
-    private LocalDateTime restricStartDate;
+    private LocalDateTime restrictStartDate;
 }
+

@@ -1,4 +1,4 @@
-package com.teamphoenix.ahub.query.vo;
+package com.teamphoenix.ahub.command.vo;
 
 import lombok.*;
 
@@ -7,8 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class RequestMember {
+public class ResponseMember {
     private String memberId;
-    private String memberPwd;
+    private String message;
 }
-
