@@ -9,5 +9,5 @@ class AhubMemberApplicationTestsInfo {
     @Test
     void contextLoads() {
     }
-
 }
+

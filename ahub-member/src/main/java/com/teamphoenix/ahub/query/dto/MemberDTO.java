@@ -22,6 +22,9 @@ public class MemberDTO {
     private int withdrawalAcceptance;
     private int memberCategoryId;
 
+    public MemberDTO() {
+    }
+
     /* 설명. 전체 회원 조회용(관리자) */
     public MemberDTO(int memberCode, String memberId, String memberName, String memberPwd, String memberEmail, String memberAddr, String memberPhone, int blacklistStatus, int memberCategoryId) {
         this.memberId = memberId;
@@ -203,6 +206,5 @@ public class MemberDTO {
                 ", memberCategoryId=" + memberCategoryId +
                 '}';
     }
-
-
 }
+

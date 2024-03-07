@@ -11,3 +11,4 @@ public class RequestMember {
     private String memberId;
     private String memberPwd;
 }
+

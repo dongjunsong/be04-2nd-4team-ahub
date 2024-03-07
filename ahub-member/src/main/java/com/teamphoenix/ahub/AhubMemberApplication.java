@@ -17,5 +17,4 @@ public class AhubMemberApplication {
 	public ModelMapper getModelMapper() {
 		return new ModelMapper();
 	}
-
 }

@@ -17,3 +17,4 @@ public class ResponseMember {
     private String memberPhone;
     private LocalDateTime restrictStartDate;
 }
+

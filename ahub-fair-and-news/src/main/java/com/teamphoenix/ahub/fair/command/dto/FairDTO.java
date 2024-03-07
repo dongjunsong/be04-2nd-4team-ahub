@@ -4,7 +4,6 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-
 public class FairDTO {
 
     private int fairId;
@@ -17,8 +16,7 @@ public class FairDTO {
     public FairDTO() {
     }
 
-    public FairDTO(int fairId, String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
-        this.fairId = fairId;
+    public FairDTO(String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
         this.fairTitle = fairTitle;
         this.fairContent = fairContent;
         this.fairWritedate = fairWritedate;
@@ -26,7 +24,8 @@ public class FairDTO {
         this.memberCode = memberCode;
     }
 
-    public FairDTO(String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
+    public FairDTO(int fairId, String fairTitle, String fairContent, LocalDateTime fairWritedate, int useAcceptance, int memberCode) {
+        this.fairId = fairId;
         this.fairTitle = fairTitle;
         this.fairContent = fairContent;
         this.fairWritedate = fairWritedate;
