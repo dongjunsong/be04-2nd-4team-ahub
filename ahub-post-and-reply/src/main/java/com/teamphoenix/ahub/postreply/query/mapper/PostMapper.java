@@ -13,7 +13,4 @@ public interface PostMapper {
 
     LikePostAndPostDTO selectPostsByLikeId(Map<String, Integer> likeId);
 
-//    PostDTO selectDaylikePost(Map<String, Object> postDate);
-//
-//    PostDTO selectMonthLikePost(Map<String, Object> postDate);
 }

@@ -4,12 +4,8 @@ import com.teamphoenix.ahub.postreply.query.dto.LikePostAndPostDTO;
 import com.teamphoenix.ahub.postreply.query.dto.PostDTO;
 import com.teamphoenix.ahub.postreply.query.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 
@@ -41,26 +37,5 @@ public class PostController {
 
         return postService.selectPostsByLikeId(inputLikeId);
     }
-
-//    @GetMapping("/findDayLikePost")
-//    public PostDTO findDayLikePost() {
-//        LocalDate localDate1 = LocalDate.now();
-//        String dateFormat1 = localDate1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-//
-//        String inputLikeAmount = "5";
-//
-//        return postService.selectDayLikePost(dateFormat1, inputLikeAmount);
-//    }
-//
-//
-//
-//    @GetMapping("/findMonthLikePost")
-//    public PostDTO findMonthLikePost() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("월별인기게시글 날짜를 입력: ");
-//        String inputPostDate2 = sc.nextLine();
-//
-//        return postService.selectMonthLikePost(inputPostDate2);
-//    }
 
 }

@@ -29,18 +29,6 @@ class PostServiceTest {
         );
     }
 
-//    static Stream<Arguments> getPostDate() {
-//        return Stream.of(
-//                Arguments.of("2024-01-20")
-//        );
-//    }
-//
-//    static Stream<Arguments> getPostDate2() {
-//        return Stream.of(
-//                Arguments.of("2024-01-01")
-//        );
-//    }
-
     @DisplayName("회원 코드로 조회")
     @ParameterizedTest
     @MethodSource("getMemberCode")
@@ -59,23 +47,4 @@ class PostServiceTest {
         );
     }
 
-//    @DisplayName("Process Day Like Post Test")
-//    @ParameterizedTest
-//    @MethodSource("getPostDate")
-//    void testProcessDayLikePost(String postDate) {
-//        Integer likeAmount = 5;
-//        Assertions.assertDoesNotThrow(
-//                () -> postService.findDayLikePost(postDate, likeAmount)
-//        );
-//    }
-//
-//    @DisplayName("Process Month Like Post Test")
-//    @ParameterizedTest
-//    @MethodSource("getPostDate2")
-//    void testProcessMonthLikePost(String postDate2) {
-//        Integer likeAmount = 10;
-//        Assertions.assertDoesNotThrow(
-//                () -> postService.findMonthLikePost(postDate2, likeAmount)
-//        );
-//    }
 }

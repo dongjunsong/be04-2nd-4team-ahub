@@ -12,8 +12,4 @@ public class AhubPostAndReplyApplication {
 		SpringApplication.run(AhubPostAndReplyApplication.class, args);
 	}
 
-//	@Bean
-//	public ModelMapper getMapper() {
-//		return new ModelMapper();
-//	}
 }
