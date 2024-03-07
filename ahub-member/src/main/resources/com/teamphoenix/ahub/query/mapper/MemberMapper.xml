@@ -78,14 +78,21 @@
         WHERE MEMBER_ID = #{ memberId }
     </select>
 
-    <select id="selectMyprofile" resultMap="memberResult" parameterType="_int">
+    <select id="selectMyprofile" resultMap="memberResult" parameterType="String">
         SELECT
-        MEMBER_NAME
+        MEMBER_CODE
+        , MEMBER_NAME
         , MEMBER_ID
         , MEMBER_EMAIL
         , MEMBER_ADDR
         , MEMBER_PHONE
+        , BLACKLIST_STATUS
         , RESTRICT_START_DATE
+        , RESTRICT_END_DATE
+        , LOGIN_FAIL_COUNT
+        , ACCESS_ACCEPTANCE
+        , WITHDRAWAL_ACCEPTANCE
+        , MEMBER_CATEGORY_ID
         FROM MEMBER_INFO
         WHERE MEMBER_ID = #{ memberId }
     </select>

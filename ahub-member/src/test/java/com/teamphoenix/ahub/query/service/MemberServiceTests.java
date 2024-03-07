@@ -38,8 +38,8 @@ public class MemberServiceTests {
     }
 
     static Stream<Arguments> getCurrentMemberId() {
-        return Stream.of(Arguments.of(new MemberDTO("user01")),
-                Arguments.of(new MemberDTO("user02"))
+        return Stream.of(Arguments.of("user01"),
+                Arguments.of("user02")
         );
     }
     static Stream<Arguments> getMemberLoginInfo() {
@@ -78,9 +78,9 @@ public class MemberServiceTests {
     @DisplayName("회원 프로필 조회")
     @ParameterizedTest
     @MethodSource("getCurrentMemberId")
-    void testSelectMyprofile(MemberDTO currentMember){
+    void testSelectMyprofile(String currentMemberId){
         Assertions.assertDoesNotThrow(
-                () -> memberService.selectMyprofile(currentMember)
+                () -> memberService.selectMyprofile(currentMemberId)
         );
     }
 

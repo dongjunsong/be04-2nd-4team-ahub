@@ -1,9 +1,13 @@
 package com.teamphoenix.ahub.query.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teamphoenix.ahub.query.dto.MemberDTO;
 import com.teamphoenix.ahub.query.service.MemberService;
 import com.teamphoenix.ahub.query.vo.RequestMember;
-import com.teamphoenix.ahub.query.vo.ResponseMember;
+import com.teamphoenix.ahub.query.vo.MyProfileResponseMember;
+import com.teamphoenix.ahub.query.vo.LoginResponseMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,34 +55,41 @@ public class MemberController {
     }
 
     @PostMapping("/findMyprofile")
-    public ResponseEntity<ResponseMember> selectMyprofile(@RequestBody RequestMember currentMemberId) {
-        MemberDTO currentMember = modelMapper.map(currentMemberId, MemberDTO.class);
+    public ResponseEntity<MyProfileResponseMember> selectMyprofile(@RequestBody String currentMemberId) {
 
-        MemberDTO myProfile = memberService.selectMyprofile(currentMember);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            JsonNode jsonNode = objectMapper.readTree(currentMemberId);
+            String memberId = jsonNode.get("currentMemberId").asText();
 
-        ResponseMember responseMember = new ResponseMember();
-        responseMember.setMemberId(myProfile.getMemberId());
-        responseMember.setMemberName(myProfile.getMemberName());
-        responseMember.setMemberAddr(myProfile.getMemberAddr());
-        responseMember.setMemberEmail(myProfile.getMemberEmail());
-        responseMember.setMemberPhone(myProfile.getMemberPhone());
-        responseMember.setRestrictStartDate(myProfile.getRestrictStartDate());
+            MemberDTO myProfile = memberService.selectMyprofile(memberId);
 
-        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
+            MyProfileResponseMember myProfileResponseMember = new MyProfileResponseMember();
+            myProfileResponseMember.setMemberId(myProfile.getMemberId());
+            myProfileResponseMember.setMemberName(myProfile.getMemberName());
+            myProfileResponseMember.setMemberAddr(myProfile.getMemberAddr());
+            myProfileResponseMember.setMemberEmail(myProfile.getMemberEmail());
+            myProfileResponseMember.setMemberPhone(myProfile.getMemberPhone());
+            myProfileResponseMember.setRestrictStartDate(myProfile.getRestrictStartDate());
+
+            return ResponseEntity.status(HttpStatus.OK).body(myProfileResponseMember);
+
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
-
 
     /* 설명. 회원 로그인에 security 적용하기 */
     @PostMapping("/findLogin")
-    public ResponseEntity<ResponseMember> memberLogin(@RequestBody RequestMember login) {
+    public ResponseEntity<LoginResponseMember> memberLogin(@RequestBody RequestMember login) {
         MemberDTO memberLoginInfo = modelMapper.map(login, MemberDTO.class);
 
         MemberDTO loginResult = memberService.memberLogin(memberLoginInfo);
 
-        ResponseMember responseMember = new ResponseMember();
-        responseMember.setMemberId(login.getMemberId());
-        responseMember.setMemberName(loginResult.getMemberName());
+        LoginResponseMember loginResponseMember = new LoginResponseMember();
+        loginResponseMember.setMemberId(loginResult.getMemberId());
+        loginResponseMember.setMemberName(loginResult.getMemberName());
 
-        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
+        return ResponseEntity.status(HttpStatus.OK).body(loginResponseMember);
     }
 }
