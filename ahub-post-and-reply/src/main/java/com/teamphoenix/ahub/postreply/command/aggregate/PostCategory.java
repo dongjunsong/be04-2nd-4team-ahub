@@ -24,6 +24,4 @@ public class PostCategory {
     @Column(name="category_name")
     private String categoryName;
 
-
-
 }

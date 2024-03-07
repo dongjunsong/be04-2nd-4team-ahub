@@ -6,7 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString        // 양방향 관계면 순환 참조 일어남 주의!!
+@ToString
 public class PostCategoryDTO {
 
     private int categoryId;

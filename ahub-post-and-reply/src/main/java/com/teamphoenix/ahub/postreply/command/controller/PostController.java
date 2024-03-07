@@ -1,66 +1,79 @@
-//package com.teamphoenix.ahub.postreply.command.controller;
+package com.teamphoenix.ahub.postreply.command.controller;
+
+import com.teamphoenix.ahub.postreply.command.dto.PostDTO;
+import com.teamphoenix.ahub.postreply.command.service.PostService;
+import com.teamphoenix.ahub.postreply.command.vo.RequestRegist;
+import com.teamphoenix.ahub.postreply.command.vo.ResponseRegist;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
+
+@RestController(value = "postCommandController")
+@RequestMapping("/post")
+public class PostController {
+
+    private final PostService postService;
+    private final ModelMapper modelMapper;
+
+    @Autowired
+    public PostController(PostService postService, ModelMapper modelMapper) {
+        this.postService = postService;
+        this.modelMapper = modelMapper;
+    }
+
+    @PostMapping("/new")
+    public ResponseEntity<ResponseRegist> addNewPost(@RequestBody RequestRegist postInfo) {
+
+        PostDTO newPost = modelMapper.map(postInfo, PostDTO.class);
+        newPost.setPostDate(LocalDateTime.now());
+        newPost.setPostModifyDate(LocalDateTime.now());
+        newPost.setUseAcceptance(1);
+        newPost.setMemberCode(1);
+
+        postService.createPost(newPost);
+
+        ResponseRegist responseRegist = new ResponseRegist();
+        responseRegist.setMessage("Success to add new post.");
+        responseRegist.setResult(newPost);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED).body(responseRegist);
+    }
+
+//    @PutMapping("/{postId}")
+//    public ResponseEntity<ResponseStatus> modifyPost(
+//            @PathVariable(value = "postId") int postId,
+//            @RequestBody PostDTO modifyInfo) {
 //
-//import com.teamphoenix.ahub.postreply.command.service.PostService;
-//import lombok.extern.slf4j.Slf4j;
-//import org.modelmapper.ModelMapper;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.*;
+//        modifyInfo.setPostDate(LocalDateTime.now());
 //
-//import java.util.List;
+//        postService.modifyPost(postId, modifyInfo);
 //
+//        ResponseStatus respMessage = new ResponseStatus();
+//        respMessage.setCode("200, OK");
+//        respMessage.setMessage("Success to update [ " + postId + " ] post.");
+//        respMessage.setUrl("http://localhost:8000/board/posts/lists");
+//        respMessage.setResult(modifyInfo);
 //
-//@RestController(value = "postCommandController")
-//@RequestMapping("/post")
-//@Slf4j
-//public class PostController {
-//
-//    private final PostService postService;
-//
-//    private final ModelMapper modelMapper;
-//
-//    @Autowired
-//    public PostController(PostService postService, ModelMapper modelMapper) {
-//        this.postService = postService;
-//        this.modelMapper = modelMapper;
+//        return ResponseEntity
+//                .status(HttpStatus.OK).body(respMessage);
 //    }
 //
-//    @GetMapping("/regist")
-//    public void registPage() {}
+//    @DeleteMapping("/{postId}")
+//    public ResponseEntity<ResponseStatus> removePost(@PathVariable("postId") int postId) {
 //
-//    /* 설명. /menu/regist.html이 열리자마자 js코드를 통해 /menu/category 비동기 요청이 오게 된다. */
-//    @GetMapping(value="/category", produces="application/json; charset=UTF-8")
+//        postService.removePost(postId);
 //
-//    @ResponseBody
-//    public List<PostCategoryDTO> findCategoryList() {
-//        return postService.findAllCategory();
+//        ResponseStatus respMessage = new ResponseStatus();
+//        respMessage.setCode("200, OK");
+//        respMessage.setMessage("Success to delete [ " + postId + " ] post.");
+//        respMessage.setUrl("http://localhost:8000/board/posts/lists");
+//
+//        return ResponseEntity
+//                .status(HttpStatus.OK).body(respMessage);
 //    }
-//
-//    /* 설명. Spring Data JPA로 DML 작업하기(Insert, Update, Delete) */
-//    @PostMapping("/regist")
-//    public String registPost(PostDTO newPost) {
-//        postService.registPost(newPost);
-//
-//        return "redirect:/post/list";
-//    }
-//
-//    @GetMapping("/modify")
-//    public void modifyPage() {}
-//
-//    @PostMapping("/modify")
-//    public String modifyPost(PostDTO modifyPost) {
-//        postService.modifyPost(modifyPost);
-//
-//        return "redirect:/post/" + modifyPost.getPostId();
-//    }
-//
-//    @GetMapping("/delete")
-//    public void deletePage() {}
-//
-//    @PostMapping("/delete")
-//    public String deletePost(@RequestParam int postId) {
-//        postService.deletePost(postId);
-//
-//        return "redirect:/post/list";
-//    }
-//}
+}
