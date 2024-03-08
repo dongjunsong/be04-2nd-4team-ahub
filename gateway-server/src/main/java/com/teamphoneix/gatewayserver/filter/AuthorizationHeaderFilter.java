@@ -40,6 +40,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
             HttpHeaders httpHeaders = httpRequest.getHeaders();
             Set<String> keys = httpHeaders.keySet();
             Iterator<String> iter = keys.iterator();
+
             while (iter.hasNext()) {
                 log.info(iter.next());
             }

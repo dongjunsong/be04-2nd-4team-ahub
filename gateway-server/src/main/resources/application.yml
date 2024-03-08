@@ -54,12 +54,17 @@ spring:
 
         # Member Service Feign Client 설정
         - id: member-service
+          uri: lb://MEMBER-SERVICE
+          predicates:
+            - Path=/member/**
+            - Method=POST, PUT, DELETE
+
+        # Member Service GET 설정
+        - id: member-service
           uri: lb://member-service
           predicates:
-            - Path=/member-service/**
-            - Method=POST, PUT, DELETE
-          filters:
-            - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+            - Path=/member/**
+            - Method=GET
 
         # 로그인용 라우팅
         - id: login

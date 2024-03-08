@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Service
+@Service("MemberService2")
 public class MemberServiceImpl implements MemberService {
     private final MemberMapper memberMapper;
     private final PostAndReplyServiceClient postAndReplyServiceClient;

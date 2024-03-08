@@ -2,6 +2,7 @@ package com.teamphoenix.ahub.member.command.repository;
 
 import com.teamphoenix.ahub.member.command.aggregate.MemberInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository

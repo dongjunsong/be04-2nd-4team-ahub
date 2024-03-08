@@ -46,11 +46,13 @@ public class FairServiceImpl implements FairService {
             System.out.println("writerId = " + writerId);
 
             ResponseMember resp = memberServiceClient.getWriterCode(writerId);
+
             int searchCode = resp.getMemberCode();
             searchInfo.setMemberCode(searchCode);
         }
 
         List<FairDTO> result = fairMapper.selectPostsByCondition(searchInfo);
+        System.out.println("1차 조회 결과 수행문 !!!!!!!! result = " + result);
         List<String> codeList = new ArrayList<>();
 
         for (FairDTO fairDTO : result) {
@@ -59,7 +61,10 @@ public class FairServiceImpl implements FairService {
             codeList.add(writerCode);
         }
 
+        System.out.println("작성자 코드 리스트 생성 확인 codeList = " + codeList);
+
         List<String> idList = memberServiceClient.getWriterList(codeList);
+        System.out.println("idList Member까지 잘 다녀오는지 확인 = " + idList);
 
         for (int i = 0; i < result.size(); i++) {
 
@@ -67,6 +72,7 @@ public class FairServiceImpl implements FairService {
             fairDTO.setWriterId(idList.get(i));
         }
 
+        System.out.println("최종 결과 확인 @@@@@@@@ result = " + result);
         return result;
     }
 

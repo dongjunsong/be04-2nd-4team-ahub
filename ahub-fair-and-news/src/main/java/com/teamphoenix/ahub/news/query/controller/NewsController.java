@@ -53,7 +53,7 @@ public class NewsController {
         ResponseSearchList result = new ResponseSearchList();
         result.setCode("200, OK");
         result.setMessage("Success to Read list.");
-        result.setUrl("http://localhost:8000/board/fairs/{postId}");
+        result.setUrl("http://localhost:8000/board/news/{postId}");
         result.setResult(responseLists);
 
         return ResponseEntity
