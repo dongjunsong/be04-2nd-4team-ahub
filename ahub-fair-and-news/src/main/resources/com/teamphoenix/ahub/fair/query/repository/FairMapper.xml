@@ -17,24 +17,24 @@
 
     <select id="getFairPost" parameterType="_int" resultMap="getOrdinaryView">
         SELECT
-        F.fair_id
-        , F.fair_title
-        , F.fair_content
-        , F.fair_writedate
-        , F.use_acceptance
-        , F.member_code
-        FROM fair F
-        WHERE F.fair_id = #{fairId}
+               F.fair_id
+             , F.fair_title
+             , F.fair_content
+             , F.fair_writedate
+             , F.use_acceptance
+             , F.member_code
+          FROM fair F
+         WHERE F.fair_id = #{fairId}
     </select>
 
     <select id="selectPostsByCondition" parameterType="com.teamphoenix.ahub.fair.query.dto.FairDTO" resultMap="selectFairList">
         SELECT
-        F.fair_id
-        , F.fair_title
-        , F.fair_writedate
-        , F.use_acceptance
-        , F.member_code
-        FROM fair F
+               F.fair_id
+             , F.fair_title
+             , F.fair_writedate
+             , F.use_acceptance
+             , F.member_code
+          FROM fair F
         <where>
             <if test="fairTitle neq null and fairContent eq null">
                 F.fair_title LIKE CONCAT ('%', #{fairTitle}, '%')
