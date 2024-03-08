@@ -2,46 +2,52 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamphoenix.ahub.news.query.mapper.NewsMapper">
+<mapper namespace="com.teamphoenix.ahub.news.query.repository.NewsMapper">
 
-    <resultMap id="searchNewsByCondition" type="com.teamphoenix.ahub.news.query.dto.NewsDTO">
+    <resultMap id="selectNewsList" type="com.teamphoenix.ahub.news.query.dto.FairDTO">
         <id property="newsId" column="news_id"/>
         <result property="newsTitle" column="news_title"/>
         <result property="newsWritedate" column="news_writedate"/>
+        <result property="useAcceptance" column="use_acceptance"/>
         <result property="memberCode" column="member_code"/>
     </resultMap>
-    <resultMap id="getOrdinaryView" type="com.teamphoenix.ahub.news.query.dto.NewsDTO" extends="searchNewsByCondition">
+    <resultMap id="getOrdinaryView" type="com.teamphoenix.ahub.news.query.dto.FairDTO" extends="selectFairList">
         <result property="newsContent" column="news_content"/>
     </resultMap>
 
-    <select id="getNewsPost" parameterType="_int" resultMap="getOrdinaryView">
+    <select id="getFairPost" parameterType="_int" resultMap="getOrdinaryView">
         SELECT
-        F.news_id
-        , F.news_title
-        , F.news_content
-        , F.news_writedate
-        , F.member_code
-        FROM news F
-        WHERE F.news_id = #{newsId} ;
+               N.news_id
+             , N.news_title
+             , N.news_content
+             , N.news_writedate
+             , N.use_acceptance
+             , N.member_code
+          FROM News N
+         WHERE F.fair_id = #{newsId}
     </select>
 
-    <select id="selectPostsByCondition" parameterType="com.teamphoenix.ahub.news.query.dto.NewsDTO" resultMap="searchNewsByCondition">
+    <select id="selectPostsByCondition" parameterType="com.teamphoenix.ahub.news.query.dto.NewsDTO" resultMap="selectNewsList">
         SELECT
-        F.news_id
-        , F.news_title
-        , F.news_writedate
-        , F.member_code
-        FROM news F
+               N.news_id
+             , N.news_title
+             , N.news_writedate
+             , N.use_acceptance
+             , N.member_code
+          FROM News N
         <where>
             <if test="newsTitle neq null and newsContent eq null">
-                F.news_title LIKE CONCAT ('%', #{newsTitle}, '%')
+                N.news_title LIKE CONCAT ('%', #{newsTitle}, '%')
             </if>
             <if test="newsContent neq null and newsTitle eq null">
-                F.news_content LIKE CONCAT('%', #{newsContent}, '%')
+                N.news_content LIKE CONCAT('%', #{newsContent}, '%')
             </if>
             <if test="newsTitle neq null and newsContent neq null">
-                F.news_title LIKE CONCAT('%', #{newsTitle}, '%')
-                AND F.news_content LIKE CONCAT('%', #{newsContent}, '%')
+                N.news_title LIKE CONCAT('%', #{newsTitle}, '%')
+                AND N.news_content LIKE CONCAT('%', #{newsContent}, '%')
+            </if>
+            <if test="memberCode neq 0">
+                N.member_code = #{memberCode}
             </if>
         </where>
     </select>

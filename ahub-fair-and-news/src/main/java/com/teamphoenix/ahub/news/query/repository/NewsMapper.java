@@ -7,6 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface NewsMapper {
+
     NewsDTO getNewsPost(int postNum);
 
     List<NewsDTO> selectPostsByCondition(NewsDTO searchInfo);
