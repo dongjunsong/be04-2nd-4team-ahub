@@ -1,48 +1,19 @@
 package com.teamphoenix.postreply.reply.query.service;
 
 
-import com.teamphoenix.postreply.reply.query.entity.Reply;
-import com.teamphoenix.postreply.reply.query.repository.ReplyMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.teamphoenix.postreply.reply.query.dto.ReplyDTO;
 
 import java.util.List;
 
-@Service
-public class ReplyService {
 
-    private ReplyMapper replyMapper;
+public interface ReplyService {
 
-    @Autowired
-    public ReplyService(ReplyMapper replyMapper) {
-        this.replyMapper = replyMapper;
-    }
+    List<ReplyDTO> selectAllReplyInBoard(int postId);
 
-    public List<Reply> selectAllReply() {
-        List<Reply> replies = replyMapper.selectAllReply();
-        replies.forEach(System.out::println);
 
-        return replies;
-    }
+    List<ReplyDTO> selectReplyBySearch(String searchingValue);
 
-    public List<Reply> selectAllReplyInBoard(int postId) {
-        List<Reply> replies = replyMapper.selectAllReplyInBoard(postId);
-        replies.forEach(System.out::println);
 
-        return replies;
-    }
+    List<ReplyDTO> selectReplyByWriter(int memberId);
 
-    public List<Reply> selectReplyBySearch(String searchingValue) {
-        List<Reply> replies = replyMapper.selectReplyBySearch(searchingValue);
-        replies.forEach(System.out::println);
-
-        return replies;
-    }
-
-    public List<Reply> selectReplyByWriter(int memberId) {
-        List<Reply> replies = replyMapper.selectReplyByWriter(memberId);
-        replies.forEach(System.out::println);
-
-        return replies;
-    }
 }
