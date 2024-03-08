@@ -1,5 +1,7 @@
 package com.teamphoenix.ahub.news.query.service;
 
+// 같은 Member Project로 FeignClient 요청을 날려야 하지만,
+// 같은 이름을 가진 FeignClient 는 두개 생성할 수 없어서 fair 프로젝트에 생성한 클래스를 빌려옴.
 import com.teamphoenix.ahub.fair.command.client.MemberServiceClient;
 import com.teamphoenix.ahub.fair.command.vo.ResponseMember;
 import com.teamphoenix.ahub.news.query.dto.NewsDTO;

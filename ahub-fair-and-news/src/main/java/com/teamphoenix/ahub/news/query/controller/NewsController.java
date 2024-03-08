@@ -1,8 +1,7 @@
 package com.teamphoenix.ahub.news.query.controller;
 
-import com.teamphoenix.ahub.fair.query.dto.FairDTO;
-import com.teamphoenix.ahub.fair.query.vo.ResponseList;
-import com.teamphoenix.ahub.fair.query.vo.ResponseSearchList;
+import com.teamphoenix.ahub.news.query.vo.ResponseList;
+import com.teamphoenix.ahub.news.query.vo.ResponseSearchList;
 import com.teamphoenix.ahub.news.query.vo.ResponseFindPost;
 import com.teamphoenix.ahub.news.query.dto.NewsDTO;
 import com.teamphoenix.ahub.news.query.service.NewsService;
