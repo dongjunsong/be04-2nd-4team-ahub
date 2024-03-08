@@ -17,4 +17,10 @@ public interface PostMapper {
     List<PostDTO> selectDayLikePost(Map<String, String> map1);
 
     List<PostDTO> selectMonthLikePost(Map<String, String> map2);
+
+    PostDTO getPost(int postNum);
+
+    List<PostDTO> selectPostsByCondition(PostDTO searchInfo) ;
+
+//    List<postDTO> selectAllPosts();
 }

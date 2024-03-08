@@ -4,67 +4,24 @@ import com.teamphoenix.ahub.postreply.query.dto.LikePostAndPostDTO;
 import com.teamphoenix.ahub.postreply.query.dto.PostDTO;
 import com.teamphoenix.ahub.postreply.query.mapper.PostMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Service("postService1")
-public class PostService {
+public interface PostService {
 
-    private final PostMapper postMapper;
+    public List<PostDTO> selectPostsByMemberCode(String inputMemberCode);
 
-    @Autowired
-    public PostService(PostMapper postMapper) {
-        this.postMapper = postMapper;
-    }
+    public List<LikePostAndPostDTO> selectPostsByLikeId(String inputLikeId);
 
-    public List<PostDTO> selectPostsByMemberCode(String inputMemberCode) {
-        int intMemberCode = Integer.valueOf(inputMemberCode);
+    public List<PostDTO> selectDayLikePost(String inputPostDate);
 
-        Map<String, Integer> memberCode = new HashMap<>();
-        memberCode.put("memberCode", intMemberCode);
+    public List<PostDTO> selectMonthLikePost(String inputPostDate);
 
-        List<PostDTO> memberList = postMapper.selectPostsByMemberCode(memberCode);
+    PostDTO getPost(int postId);
 
-        return memberList;
-    }
-
-    public List<LikePostAndPostDTO> selectPostsByLikeId(String inputLikeId) {
-        int intLikeId = Integer.valueOf(inputLikeId);
-
-        Map<String, Integer> likeId = new HashMap<>();
-        likeId.put("likeId", intLikeId);
-
-        List<LikePostAndPostDTO> memberList2 = postMapper.selectPostsByLikeId(likeId);
-
-        return memberList2;
-    }
-
-    public List<PostDTO> selectDayLikePost(String inputPostDate) { // 오늘자 여러 게시글을 받기 위해 List<PostDTO> 사용하기
-        String postDate1 = String.valueOf(inputPostDate);
-
-        Map<String, String> map1 = new HashMap<>();
-        map1.put("postDate", postDate1);
-        map1.put("likeAmount", "5");
-
-        List<PostDTO> postDateList = postMapper.selectDayLikePost(map1);
-
-        return postDateList;
-    }
-
-    public List<PostDTO> selectMonthLikePost(String inputPostDate) { // 이달의 여러 게시글을 받기 위해 List<PostDTO> 사용하기
-        String postDate2 = String.valueOf(inputPostDate);
-
-        Map<String, String> map2 = new HashMap<>();
-        map2.put("postDate", postDate2);
-        map2.put("likeAmount", "10");
-
-        List<PostDTO> postDateList = postMapper.selectMonthLikePost(map2);
-
-        return postDateList;
-    }
+    List<PostDTO> findPostsByCondition(PostDTO searchInfo);
 
 
 }

@@ -114,4 +114,45 @@
         AND like_amount >= #{likeAmount}
     </select>
 
+    <resultMap id="selectPostList" type="com.teamphoenix.ahub.postreply.query.dto.PostDTO">
+        <id property="postId" column="post_id"/>
+        <result property="postTitle" column="post_title"/>
+        <result property="postDate" column="post_date"/>
+    </resultMap>
+    <resultMap id="getOrdinaryView" type="com.teamphoenix.ahub.postreply.query.dto.PostDTO" extends="selectPostList">
+        <result property="memberCode" column="member_code"/>
+        <result property="postContent" column="post_content"/>
+    </resultMap>
+
+    <select id="getPost" parameterType="_int" resultMap="getOrdinaryView">
+        SELECT
+        P.post_id
+        , P.post_title
+        , P.post_content
+        , P.post_date
+        , P.member_code
+        FROM post P
+        WHERE P.post_id = #{postId}
+    </select>
+
+    <select id="selectPostsByCondition" parameterType="com.teamphoenix.ahub.postreply.query.dto.PostDTO" resultMap="selectPostList">
+        SELECT
+        P.post_id
+        , P.post_title
+        , P.post_date
+        FROM post P
+        <where>
+            <if test="postTitle neq null and zContent eq null">
+                P.post_title LIKE CONCAT ('%', #{postTitle}, '%')
+            </if>
+            <if test="postContent neq null and postTitle eq null">
+                P.post_content LIKE CONCAT('%', #{postContent}, '%')
+            </if>
+            <if test="postTitle neq null and postContent neq null">
+                P.post_title LIKE CONCAT('%', #{postTitle}, '%')
+                AND P.post_content LIKE CONCAT('%', #{postContent}, '%')
+            </if>
+        </where>
+    </select>
+
 </mapper>
