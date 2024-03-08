@@ -1,13 +1,13 @@
-package com.teamphoenix.ahub;
+package com.teamphoneix.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AhubMemberApplicationTestsInfo {
+class PjEurekaServerApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
+
 }
-

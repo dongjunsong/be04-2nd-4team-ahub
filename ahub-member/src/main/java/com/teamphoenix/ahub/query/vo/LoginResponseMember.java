@@ -2,13 +2,12 @@ package com.teamphoenix.ahub.query.vo;
 
 import lombok.*;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
-public class RequestMember {
+public class LoginResponseMember {
     private String memberId;
-    private String memberPwd;
+    private String memberName;
 }
-

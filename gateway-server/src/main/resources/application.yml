@@ -82,3 +82,13 @@ spring:
             - Method=GET
           filters:
             - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+            
+        # Member Service Feign Client 설정
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/member-service/**
+            - Method=POST, PUT, DELETE
+          filters:
+            - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+

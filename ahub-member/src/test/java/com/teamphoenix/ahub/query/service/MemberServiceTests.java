@@ -1,8 +1,6 @@
-package com.teamphoenix.ahub;
+package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.dto.SearchCriteria;
-import com.teamphoenix.ahub.query.service.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -40,8 +38,8 @@ public class MemberServiceTests {
     }
 
     static Stream<Arguments> getCurrentMemberId() {
-        return Stream.of(Arguments.of(new MemberDTO("user01")),
-                Arguments.of(new MemberDTO("user02"))
+        return Stream.of(Arguments.of("user01"),
+                Arguments.of("user02")
         );
     }
     static Stream<Arguments> getMemberLoginInfo() {
@@ -50,7 +48,7 @@ public class MemberServiceTests {
         );
     }
 
-    @DisplayName("전체 회원 조회")
+    @DisplayName("T1 - 전체 회원 조회")
     @ParameterizedTest
     @MethodSource("getMemberInfo")
     void testSelectAllMembers() {

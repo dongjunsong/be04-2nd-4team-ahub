@@ -1,7 +1,6 @@
 package com.teamphoenix.ahub.query.service;
 
 import com.teamphoenix.ahub.query.dto.MemberDTO;
-import com.teamphoenix.ahub.query.dto.SearchCriteria;
 import com.teamphoenix.ahub.query.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,11 +47,17 @@ public class MemberService {
         return member;
     }
 
-    public MemberDTO selectMyprofile(MemberDTO currentMember){
-        String currentMemberId = currentMember.getMemberId();
+    public int getMemberCode(String currentMemberId){
+        int memberCode = 0;
+
+
+        return memberCode;
+    }
+
+    public MemberDTO selectMyprofile(String currentMemberId){
 
         Map<String, String> memberId = new HashMap<>();
-        memberId.put("memberCode", currentMemberId);
+        memberId.put("memberId", currentMemberId);
 
         MemberDTO member = memberMapper.selectMyprofile(memberId);
 
@@ -72,5 +77,4 @@ public class MemberService {
 
         return member;
     }
-
 }
