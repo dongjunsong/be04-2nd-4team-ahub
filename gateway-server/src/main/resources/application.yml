@@ -31,7 +31,26 @@ spring:
             - Method=POST, PUT, DELETE
           filters:
             - RewritePath=/board/fairs/(?<segment>.*), /fairs/$\{segment}
-#            - AuthorizationFilter
+            - AuthorizationHeaderFilter
+
+        # News Service GET
+        - id: news-get
+          uri: lb://FAIR-AND-NEWS-SERVICE
+          predicates:
+            - Path=/board/news/**
+            - Method=GET
+          filters:
+            - RewritePath=/board/news/(?<segment>.*), /news/$\{segment}
+
+        # News Service POST, PUT, DELETE
+        - id: news-modify
+          uri: lb://FAIR-AND-NEWS-SERVICE
+          predicates:
+            - Path=/board/news/**
+            - Method=POST, PUT, DELETE
+          filters:
+            - RewritePath=/board/news/(?<segment>.*), /news/$\{segment}
+            - AuthorizationHeaderFilter
 
         # Member Service Feign Client 설정
         - id: member-service
@@ -41,3 +60,16 @@ spring:
             - Method=POST, PUT, DELETE
           filters:
             - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+
+        # 로그인용 라우팅
+        - id: login
+          uri: lb://MEMBER-SERVICE
+          predicates:
+            - Path=/login
+            - Method=POST
+
+
+
+
+token:
+  sercretKey: k/3f0rHITyFhkBQWfa7rlSAQ3s07wIgj7pUGgq5Q4EXbihvcPPapnHnKQAWV+u3mXJzIBQ9Cm++F0JPEHIv80g==
