@@ -1,8 +1,10 @@
 package com.teamphoenix.postreply.reply.command.service;
 
+import com.teamphoenix.postreply.reply.command.client.ReplyServiceClient;
 import com.teamphoenix.postreply.reply.command.dto.ReplyDTO;
 import com.teamphoenix.postreply.reply.command.entity.Reply;
 import com.teamphoenix.postreply.reply.command.repository.ReplyRepository;
+import com.teamphoenix.postreply.reply.command.vo.MemberResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service(value = "CommandReplyService")
@@ -22,10 +25,13 @@ public class ReplyServiceImpl implements ReplyService{
     private final ModelMapper mapper;
     private final ReplyRepository replyRespository;
 
+    private ReplyServiceClient replyServiceClient;
+
     @Autowired
-    public ReplyServiceImpl(ModelMapper mapper, ReplyRepository replyRespository) {
+    public ReplyServiceImpl(ModelMapper mapper, ReplyRepository replyRespository, ReplyServiceClient replyServiceClient) {
         this.mapper = mapper;
         this.replyRespository = replyRespository;
+        this.replyServiceClient = replyServiceClient;
     }
 
     @Transactional
@@ -58,5 +64,19 @@ public class ReplyServiceImpl implements ReplyService{
         List<Reply> replies = replyRespository.findAll(Sort.by("replyId").descending());
 
         return replies.stream().map(reply -> mapper.map(reply, ReplyDTO.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public ReplyDTO getReplyWithMemberNameById(int memberId) {
+        MemberResponse memberName = replyServiceClient.getMemberName(memberId);
+        System.out.println(memberName);
+
+        Optional<Reply> reply = replyRespository.findById(memberId);
+        System.out.println(reply);
+        ReplyDTO replyDTO = mapper.map(reply, ReplyDTO.class);
+
+        replyDTO.setMemberName(memberName.getMemberName());
+
+        return replyDTO;
     }
 }

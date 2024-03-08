@@ -23,7 +23,7 @@ public class ReplyController {
     }
 
     @PostMapping("/regist")
-    public ResponseEntity<?> registReply(@RequestBody ReplyDTO registInfo) {
+    public ResponseEntity<List<ReplyDTO>> registReply(@RequestBody ReplyDTO registInfo) {
 
         List<ReplyDTO> replies = replyService.registReply(registInfo);
 
@@ -31,7 +31,7 @@ public class ReplyController {
     }
 
     @PutMapping("/modify/{replyId}")
-    public ResponseEntity<?> modifyReply(@RequestBody ReplyDTO modifyInfo, @PathVariable int replyId) {
+    public ResponseEntity<ReplyDTO> modifyReply(@RequestBody ReplyDTO modifyInfo, @PathVariable int replyId) {
 
         ReplyDTO reply = replyService.modifyReply(modifyInfo, replyId);
 
@@ -39,10 +39,18 @@ public class ReplyController {
     }
 
     @DeleteMapping("/delete/{replyId}")
-    public ResponseEntity<?> deleteReply(@PathVariable int replyId){
+    public ResponseEntity<List<ReplyDTO>> deleteReply(@PathVariable int replyId){
 
         List<ReplyDTO> replies = replyService.deleteReply(replyId);
 
         return ResponseEntity.status(HttpStatus.OK).body(replies);
+    }
+
+    @GetMapping("/member/test/{memberId}")
+    public ResponseEntity<?> getReplyWithMemberName(@PathVariable("memberId") int memberId) {
+        ReplyDTO replyDTO = replyService.getReplyWithMemberNameById(memberId);
+
+
+        return ResponseEntity.status(HttpStatus.OK).body(replyDTO);
     }
 }

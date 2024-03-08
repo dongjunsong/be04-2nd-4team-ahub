@@ -16,5 +16,6 @@ public class ReplyDTO {
     private int reportAcceptance;
     private int useAcceptance;
     private int memberCode;
+    private String memberName;
 
 }

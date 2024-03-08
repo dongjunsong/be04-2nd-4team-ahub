@@ -73,3 +73,12 @@ spring:
           predicates:
             - Path=/reply/delete/**
             - Method=DELETE
+
+        # Reply Service GET TEST
+        - id: member-service
+          uri: lb://MEMBER-SERVICE
+          predicates:
+            - Path=/member-service/**
+            - Method=GET
+          filters:
+            - RewritePath=/member-service/(?<segment>.*), /$\{segment}

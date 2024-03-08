@@ -10,4 +10,5 @@ public interface ReplyService {
     ReplyDTO modifyReply(ReplyDTO modifyInfo, int replyId);
     List<ReplyDTO> registReply(ReplyDTO newReply);
 
+    ReplyDTO getReplyWithMemberNameById(int memberId);
 }
