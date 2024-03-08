@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: member-service
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localhost:3306/ahubdb
@@ -6,7 +8,7 @@ spring:
     password: phoenix
 
 server:
-  port: 10001
+  port: 0
 
 eureka:
   client:

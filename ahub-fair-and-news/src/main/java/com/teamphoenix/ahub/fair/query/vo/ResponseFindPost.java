@@ -2,14 +2,13 @@ package com.teamphoenix.ahub.fair.query.vo;
 
 import com.teamphoenix.ahub.fair.query.dto.FairDTO;
 
-import java.util.List;
-
 public class ResponseFindPost {
 
     private String code;
     private String message;
     private String url;
     private FairDTO result;
+    private String writerId;
 
     public ResponseFindPost() {
     }
