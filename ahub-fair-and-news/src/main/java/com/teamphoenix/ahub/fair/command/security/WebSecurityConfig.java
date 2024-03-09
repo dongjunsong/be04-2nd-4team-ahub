@@ -31,6 +31,7 @@ public class WebSecurityConfig {
 
         http.authorizeHttpRequests((auth) -> auth
                         .requestMatchers(new AntPathRequestMatcher("/fairs/**")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/news/**")).permitAll()
                 );
 
 
