@@ -118,18 +118,22 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-FAIR-001</summary>
 
 - **Request Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/30153165-0355-4ab3-bae6-730185418208)
 
 
 - **Request Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/ae39714f-9659-444a-a112-170787e5749e)
 
 
 - **Response Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/f6bd9ff2-784f-4b27-8e07-b08c20295942)
 
 
 - **Response Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/03d827fc-c29b-4dc8-be61-fc257fa2b589)
 
 </details>
@@ -138,15 +142,19 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-FAIR-002</summary>
 
 - **Request Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/b647e946-24d1-40ab-a815-9dc1cd62fad5)
 
 - **Request Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/a3674c76-8800-47b2-a813-a63d4894af5b)
 
 - **Response Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/0ba40c75-7a8c-463d-904d-fe041a0373cb)
 
 - **Response Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/5cc822a3-094e-45ab-8ed0-10855009cf7c)
 
 </details>
@@ -155,18 +163,22 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-FAIR-003</summary>
 
 - **Request Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/5c68e1e5-f237-4845-b3bf-67e1cf556e02)
 
 
 - **Request Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/7eb39173-01f4-4fb9-8810-4c45aa230c04)
 
 
 - **Response Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/c69ea215-f0e8-43e5-9fdf-6c7aecbfa693)
 
 
 - **Response Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/c37e0b4d-6443-4528-ace9-97ec0558e200)
 
 
@@ -176,6 +188,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-FAIR-004</summary>
 
 - **Request Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/2abfb133-032e-4806-a3d7-da70e3dd9526)
 
 
@@ -184,10 +197,12 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 
 - **Response Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/2a7d7ecb-0f0f-44e2-a664-a50b42ba3ded)
 
 
 - **Response Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/666727c0-ad43-473b-9694-ca7282ce2169)
 
 </details>
@@ -196,6 +211,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-FAIR-005</summary>
 
 - **Request Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/e94b8408-35e9-49d0-b89b-d5bca4bac090)
 
 
@@ -203,15 +219,15 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <br> none
 
 - **Response Header**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/a3a2388d-6e78-4c38-bb5c-ceb4452d4528)
 
 
 - **Response Body**
+  
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/40ca06d6-0685-481e-b5fe-ead7f32f121d)
 
 </details>
-
----
 
 ---
 
@@ -391,7 +407,6 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 - **Response Body**
 ![01_GET_findAllmembers](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/88b0f378-5162-4611-be3b-d4ad3703adac)
-
 ![01_GET_findAllmembers_2](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/b08b802b-2196-4f61-ba0c-8237b6736019)
 
 </details>
