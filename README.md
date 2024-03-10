@@ -5,7 +5,7 @@
 ### 팀원
 
 - 팀원 : **백동현**
-[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongh810)
 
 - 팀원 : **손세림**
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]
