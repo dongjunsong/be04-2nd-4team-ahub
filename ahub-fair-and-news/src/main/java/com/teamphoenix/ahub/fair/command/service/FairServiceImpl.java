@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 @Service(value = "CommandFairService")
 @Slf4j
-public class FairServiceImpl implements FairService{
+public class FairServiceImpl implements FairService {
 
     private final FairRepository fairRepository;
     private final ModelMapper  modelMapper;
@@ -40,6 +40,7 @@ public class FairServiceImpl implements FairService{
                 fairInfo.getMemberCode()) ;
 
         fairRepository.save(fair);
+
         fair = fairRepository.findByFairTitle(fairInfo.getFairTitle());
 
         FairDTO result = new FairDTO(

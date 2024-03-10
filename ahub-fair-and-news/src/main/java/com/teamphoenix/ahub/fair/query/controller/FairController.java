@@ -51,7 +51,7 @@ public class FairController {
             @RequestParam(value = "id", required = false) String id) {
 
         FairDTO searchInfo = new FairDTO(title, content, id);
-        System.out.println("searchInfo = " + searchInfo);
+
         List<FairDTO> resultList = fairService.findPostsByCondition(searchInfo);
 
         List<ResponseList> responseLists = doDTOToList(resultList);

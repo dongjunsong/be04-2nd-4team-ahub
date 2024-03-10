@@ -18,6 +18,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(bearerTokenInterceptor)
-                .addPathPatterns("/fairs/new");
+                .addPathPatterns("/fairs/new")
+                .addPathPatterns("/news/new");
     }
 }

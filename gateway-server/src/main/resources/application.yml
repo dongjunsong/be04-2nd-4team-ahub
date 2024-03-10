@@ -66,6 +66,25 @@ spring:
             - Path=/member/**
             - Method=GET
 
+        - id: post
+          uri: lb://POSTREPLY-SERVER
+          predicates:
+            - Path=/post/**
+
+        - id: post-query
+          uri: lb://POSTREPLY-SERVER
+          predicates:
+            - Path=/posts/**
+
+        - id: reply
+          uri: lb://POSTREPLY-SERVER
+          predicates:
+            - Path=/reply/**
+
+
+
+
+
         # 로그인용 라우팅
         - id: login
           uri: lb://MEMBER-SERVICE

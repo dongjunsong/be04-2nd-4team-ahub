@@ -42,7 +42,7 @@ public class FairController {
         FairDTO result = fairService.registFairPost(newFairPost);
 
         ResponseStatus respMessage = createResponseStatus("201, CREATED"
-                ,"Success to add new post. Post num [ " + result.getFairId() + " ]"
+                ,"Success to add new post. Post num [" + result.getFairId() + "]"
                 ,"http://localhost:8000/board/fairs/lists"
                 , result);
 

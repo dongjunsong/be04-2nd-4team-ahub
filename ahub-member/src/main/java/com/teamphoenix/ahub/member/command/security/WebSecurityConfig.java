@@ -43,7 +43,7 @@ public class WebSecurityConfig {
         http.csrf((csrf) -> csrf.disable());
 
         http.authorizeHttpRequests((auth) -> auth
-                        .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/member/**")).permitAll()
                 )
                 .authenticationManager(authenticationManager);
 

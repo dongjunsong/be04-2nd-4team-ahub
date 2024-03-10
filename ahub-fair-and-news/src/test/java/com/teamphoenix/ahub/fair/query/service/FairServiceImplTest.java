@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 
 @SpringBootTest
-class FairServiceImplImplTest {
+class FairServiceImplTest {
 
     @Autowired
     private FairServiceImpl fairServiceImpl;
@@ -23,10 +23,11 @@ class FairServiceImplImplTest {
     static Stream<Arguments> getSearchInfo() {
 
         return Stream.of(
-                Arguments.of(new FairDTO(null, null)),
-                Arguments.of(new FairDTO("2024", null)),
-                Arguments.of(new FairDTO(null,"맥주")),
-                Arguments.of(new FairDTO("맥주", "맥주"))
+                Arguments.of(new FairDTO(null, null,null)),
+                Arguments.of(new FairDTO("2024", null, null)),
+                Arguments.of(new FairDTO(null,"맥주", null)),
+                Arguments.of(new FairDTO("맥주", "맥주", null))
+
         );
     }
 
