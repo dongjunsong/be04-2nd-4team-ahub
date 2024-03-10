@@ -132,6 +132,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 <details>
 <summary>Test Result</summary>
+<br>
  
 **CRUD** <br>
  ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/910753e3-92f0-4078-8d90-5d8c2c79d991)
