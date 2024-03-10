@@ -519,13 +519,44 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
+
+
+
+<details>
+<summary>AH-REPLY-005</summary>
+
 - **REST-API(Post) Definition Table**
 
 ![api](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/05d164a4-f2be-4832-81eb-a31c68b8531f)
 
+<details>
+<summary>AH-REPLY-001</summary>
+
+- **Request Header**
+  
+![01_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/660c5152-8db5-4ebf-b335-ccf694d72843)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![01_3Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/3e6b273b-642d-4f39-8476-e009115146c7)
+
+
+- **Response Body**
+  
+![01_2Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/0da7ef4e-8266-4621-b4f0-736c8b1a1b97)
+
+</details>
 
 
 
+
+
+</details>
 
 # 5. 프로젝트 회고
 
