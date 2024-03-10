@@ -554,7 +554,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 ---
 - **REST-API(Post) Definition Table**
-![api](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/05d164a4-f2be-4832-81eb-a31c68b8531f)
+![api](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/15eacdf6-b432-4fbf-93fc-dfa0ffab62bf)
 
 <details>
 <summary>AH-POST-001</summary>
