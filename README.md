@@ -211,10 +211,15 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
+---
+
+---
+
 <details>
 <summary>AH-REPLY-001</summary>
 
 - **Request Header**
+  
 ![스크린샷 2024-03-10 오후 7 32 41](https://github.com/dongh810/alcohol_test/assets/105986200/d68c85e2-ab63-412e-bcaf-f5893d045686)
 
 
@@ -223,15 +228,157 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 
 - **Response Header**
+  
 ![스크린샷 2024-03-10 오후 7 33 03](https://github.com/dongh810/alcohol_test/assets/105986200/c43c3763-91c8-4b6c-a80e-5e42a4545d14)
 
 
 - **Response Body**
+  
 ![스크린샷 2024-03-10 오후 7 33 18](https://github.com/dongh810/alcohol_test/assets/105986200/3d6ba0df-f559-4ca0-b2ee-27461c5e292c)
 
+</details>
 
+<details>
+<summary>AH-REPLY-002</summary>
+
+- **Request Header**
+  
+![스크린샷 2024-03-10 오후 7 33 37](https://github.com/dongh810/alcohol_test/assets/105986200/32a3eed9-d496-45b0-9a6d-9c7453df93ce)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 33 50](https://github.com/dongh810/alcohol_test/assets/105986200/481b4f58-5779-43d3-9c19-57ba1d188231)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 34 06](https://github.com/dongh810/alcohol_test/assets/105986200/19d58123-6bde-4cdc-bd7a-8a198043dd79)
 
 </details>
+
+<details>
+<summary>AH-REPLY-003</summary>
+
+- **Request Header**
+  
+![스크린샷 2024-03-10 오후 7 34 19](https://github.com/dongh810/alcohol_test/assets/105986200/b04891e9-4d4b-411d-8d4e-2b906944106e)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 34 33](https://github.com/dongh810/alcohol_test/assets/105986200/0e580ff0-b97c-43a6-a8ce-33556e1a386a)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 34 49](https://github.com/dongh810/alcohol_test/assets/105986200/46eb40bf-ed56-4743-92ef-21f1f6b890ee)
+
+</details>
+
+<details>
+<summary>AH-REPLY-004</summary>
+
+- **Request Header**
+  
+![스크린샷 2024-03-10 오후 7 35 03](https://github.com/dongh810/alcohol_test/assets/105986200/17bdcc81-bc7e-4202-b806-b23584a00757)
+
+
+- **Request Body**
+
+![스크린샷 2024-03-10 오후 7 35 10](https://github.com/dongh810/alcohol_test/assets/105986200/fe42e9bc-c6cf-43f7-a78a-1434d4d64f9c)
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 35 21](https://github.com/dongh810/alcohol_test/assets/105986200/29067157-c626-46f4-b53f-f8c7e89575e2)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 35 33](https://github.com/dongh810/alcohol_test/assets/105986200/492ffccd-8159-4a35-a935-0e6259654131)
+
+</details>
+
+<details>
+<summary>AH-REPLY-005</summary>
+
+- **Request Header**
+
+![스크린샷 2024-03-10 오후 7 35 52](https://github.com/dongh810/alcohol_test/assets/105986200/73c807be-e629-4fe4-a0b9-ae601a99f850)
+
+
+- **Request Body**
+
+![스크린샷 2024-03-10 오후 7 35 44](https://github.com/dongh810/alcohol_test/assets/105986200/0db0c353-cfe0-45b9-ab76-8907879f0085)
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 36 06](https://github.com/dongh810/alcohol_test/assets/105986200/a15a52c2-2991-4fa8-823e-eca044be5a7d)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 36 01](https://github.com/dongh810/alcohol_test/assets/105986200/ba907070-e64a-4389-bf6c-2a4d6153044d)
+
+</details>
+
+<details>
+<summary>AH-REPLY-006</summary>
+
+- **Request Header**
+  
+![스크린샷 2024-03-10 오후 7 36 20](https://github.com/dongh810/alcohol_test/assets/105986200/7f5c1e33-2f89-43f7-9477-c3c097328409)
+
+
+- **Request Body**
+<br>none
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 36 33](https://github.com/dongh810/alcohol_test/assets/105986200/617b4f69-52c7-4694-8efb-8289a623c560)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 36 40](https://github.com/dongh810/alcohol_test/assets/105986200/44ec18e6-0599-4ae5-b475-ba0685db70b1)
+
+</details>
+
+<details>
+<summary>AH-REPLY-007</summary>
+
+- **Request Header**
+  
+![스크린샷 2024-03-10 오후 7 36 49](https://github.com/dongh810/alcohol_test/assets/105986200/f3ecb25a-ba4f-4bf8-8790-c6387ed0a2d7)
+
+
+- **Request Body**
+<br>none
+
+
+- **Response Header**
+  
+![스크린샷 2024-03-10 오후 7 37 03](https://github.com/dongh810/alcohol_test/assets/105986200/3f0e78a8-973a-413f-9848-604fb64a15e6)
+
+
+- **Response Body**
+  
+![스크린샷 2024-03-10 오후 7 36 58](https://github.com/dongh810/alcohol_test/assets/105986200/b260c286-f23c-43f3-a01b-648597f752ee)
+
+</details>
+
+---
 
 <details>
 <summary>AH-MEMBER-001</summary>
