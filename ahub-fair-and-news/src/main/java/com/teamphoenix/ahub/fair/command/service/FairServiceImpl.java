@@ -29,6 +29,7 @@ public class FairServiceImpl implements FairService {
         this.memberServiceClient = memberServiceClient;
     }
 
+    // 게시글 등록 메소드
     @Transactional
     public FairDTO registFairPost(FairDTO fairInfo) {
 
@@ -69,14 +70,13 @@ public class FairServiceImpl implements FairService {
 
         FairDTO result = modelMapper.map(oldPost, FairDTO.class);
 
+        // 페인 클라이언트로 정보 읽어온다
         ResponseMember memberVO = memberServiceClient.getWriterInfo(modifyInfo.getMemberCode());
-        log.info(" Fegin Client 작동하나? : {}", memberVO);
 
         result.setWriterInfo(memberVO);
 
         return result;
 
-        /* @Transactional 에 의해 메소드 종료 시 자동으로 flush & commit */
     }
 
     /* 게시글 삭제 메소드 */
