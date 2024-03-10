@@ -14,7 +14,7 @@
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
 
 - 팀원 : **양지혜**
-[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/Jihye1101)
 
 - 팀원 : **정태원**
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/t4e1)
