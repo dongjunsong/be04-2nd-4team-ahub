@@ -23,11 +23,11 @@ public class FairController {
     private final FairService fairService;
 
     @Autowired
-    public FairController(FairService fairService) {
-        this.fairService = fairService;
+    public FairController(FairService fairServiceImpl) {
+        this.fairService = fairServiceImpl;
     }
 
-    /* 게시글을 클릭하면 내용을 호출하는 핸들러 메소드 */
+    // 게시글을 클릭하면 내용을 호출하는 핸들러 메소드
     @GetMapping("/{postId}")
     public ResponseEntity<ResponseFindPost> findFairPost(@PathVariable(value = "postId") int postId) {
 
@@ -43,17 +43,18 @@ public class FairController {
 
     }
 
-    /* 게시글 전체 리스트&검색어를 파라미터로 던질 시 해당 검색어에 해당하는 리스트를 반환하는 핸들러 메소드 */
+    // 검색 조건에 해당하는 게시글 리스트 반환하는 메소드
     @GetMapping("/lists")
     public ResponseEntity<ResponseSearchList> findPostsByCondition(
             @RequestParam(value = "st", required = false) String title,
-            @RequestParam(value = "sc", required = false) String content) {
+            @RequestParam(value = "sc", required = false) String content,
+            @RequestParam(value = "id", required = false) String id) {
 
-        FairDTO searchInfo = new FairDTO(title, content);
+        FairDTO searchInfo = new FairDTO(title, content, id);
+
         List<FairDTO> resultList = fairService.findPostsByCondition(searchInfo);
+
         List<ResponseList> responseLists = doDTOToList(resultList);
-
-
 
         ResponseSearchList result = new ResponseSearchList();
         result.setCode("200, OK");
@@ -66,6 +67,7 @@ public class FairController {
                 .body(result);
     }
 
+    // List<FairDTO>를 List<ResponseList> 로 바꿔주는 메소드
     private List<ResponseList> doDTOToList(List<FairDTO> fairList) {
         List<ResponseList> responseLists = new ArrayList<>();
         for (FairDTO fairDTO : fairList) {
@@ -73,10 +75,12 @@ public class FairController {
             responseList.setFairId(fairDTO.getFairId());
             responseList.setFairTitle(fairDTO.getFairTitle());
             responseList.setFairWritedate(fairDTO.getFairWritedate());
+            responseList.setWriteId(fairDTO.getWriterId());
 
             responseLists.add(responseList);
         }
 
         return responseLists;
     }
+
 }

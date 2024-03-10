@@ -29,7 +29,6 @@ public class RequestRegist {
         this.fairContent = fairContent;
     }
 
-
     @Override
     public String toString() {
         return "RegistFairInfo{" +
