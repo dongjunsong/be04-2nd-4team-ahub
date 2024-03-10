@@ -29,6 +29,7 @@ public class FairServiceImpl implements FairService {
         this.memberServiceClient = memberServiceClient;
     }
 
+    // 게시글 등록 메소드
     @Transactional
     public FairDTO registFairPost(FairDTO fairInfo) {
 
