@@ -8,7 +8,7 @@
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongh810)
 
 - 팀원 : **손세림**
-[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">]
+[<img src="[https://img.shields.io/badge/Github-Link-181717?logo=Github](https://github.com/bucky1005)">]
 
 - 팀원 : **송동준**
 [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
