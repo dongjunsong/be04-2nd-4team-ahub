@@ -1,7 +1,5 @@
 # Alcohol Hub(Ahub Project)
-
-이미지 추가 필요 
-이미지 추가 필요
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/09e4c600-a088-4b1b-97d8-9f67b80e7e03)
 
 ### 팀명: 불4조(Team Phoenix)
 ### 팀원
