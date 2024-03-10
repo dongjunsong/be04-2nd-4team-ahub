@@ -117,17 +117,20 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 - **REST-API Definition Table**
 
 <details>
-<summary>AHUB-MEMBER-001</summary>
+<summary>AH-FAIR-002</summary>
 
-- **Request**
-
+- **Request Header**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/b647e946-24d1-40ab-a815-9dc1cd62fad5)
+- **Request Body**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/a3674c76-8800-47b2-a813-a63d4894af5b)
 - **Response Header**
-
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/0ba40c75-7a8c-463d-904d-fe041a0373cb)
 - **Response Body**
-
-- **Success Example**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/5cc822a3-094e-45ab-8ed0-10855009cf7c)
 
 </details>
+
+
 
 
 # 5. 프로젝트 회고
