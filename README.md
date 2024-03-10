@@ -98,16 +98,9 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 - **TESTCASE Definition Table**
 
 <details>
-<summary>TC-001</summary>
-
-- **Request**
-
-- **Response Header**
-
-- **Response Body**
-
-- **Success Example**
-
+<summary>Fair Test result</summary>
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/844ab5f0-6337-45e7-ad0f-1feff2c3b133)
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/896a09d9-553f-4b91-96c8-c172c1c874b2)
 </details>
 
 
