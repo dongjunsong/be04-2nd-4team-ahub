@@ -97,6 +97,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 ### 4-1. TESTCASE Definition
 - **TESTCASE(Member) Definition Table**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/019a79ad-f3fc-4d80-a4a4-146fd5aae4e0)
 
 <details>
 <summary>Test Result</summary>
@@ -164,6 +165,8 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 ---
 
 - **TESTCASE(Post) Definition Table**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/61707680-fa22-4963-839b-a504704a7888)
+
 
 <details>
 <summary>Test Result</summary>
