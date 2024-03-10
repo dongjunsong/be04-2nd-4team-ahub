@@ -519,9 +519,6 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
-
-
-
 <details>
 <summary>AH-REPLY-005</summary>
 
