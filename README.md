@@ -525,7 +525,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 ![api](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/05d164a4-f2be-4832-81eb-a31c68b8531f)
 
 <details>
-<summary>AH-REPLY-001</summary>
+<summary>AH-POST-001</summary>
 
 - **Request Header**
   
@@ -547,8 +547,143 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
+<details>
+<summary>AH-POST-002</summary>
+
+- **Request Header**
+  
+![02_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/5ea589f6-1431-44c9-9c4c-808e66fc6104)
 
 
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![02_3Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/cc2181db-f757-4d24-a08d-202d00b2a373)
+
+
+- **Response Body**
+  
+![02_2Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/35141f6a-8c6a-4752-9564-42bc2ab325a2)
+
+</details>
+
+<details>
+<summary>AH-POST-003</summary>
+
+- **Request Header**
+  
+![03_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/013e56bf-611b-4495-91a1-e5d30fdd2de1)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![03_3Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/5cdac815-bbc2-4d0d-8892-7afbe0f2849a)
+
+
+- **Response Body**
+  
+![03_2Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/cee669f3-0aee-4d6a-a138-d4a229494397)
+
+</details>
+
+<details>
+<summary>AH-POST-004</summary>
+
+- **Request Header**
+  
+![04_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/44136d2d-bd8c-4605-b639-061fc515d79f)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+  
+![04_3Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/3d7c3f83-183d-4ff1-a467-14158c59eca9)
+
+
+- **Response Body**
+  
+![04_2Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/55cb7ebe-1fd3-498b-936a-68dde5432197)
+
+</details>
+
+<details>
+<summary>AH-POST-005</summary>
+
+- **Request Header**
+  
+![05_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/1a25d6ba-f13d-4510-b0be-2c3e2a3ebd30)
+
+
+- **Request Body**
+![05_2Request B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/ba99fe81-670e-47a1-a769-b62143894139)
+
+
+- **Response Header**
+  
+![05_4Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/f6db568f-a75c-46ae-bf71-43280e361760)
+
+
+- **Response Body**
+  
+![05_3Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/3a0ee014-5851-4879-a652-a50d1aba65a4)
+
+</details>
+
+<details>
+<summary>AH-POST-006</summary>
+
+- **Request Header**
+  
+![06_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/721027b1-b9ff-43b6-a59b-83d85b6b2736)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+
+![06_3Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/a233e116-a748-4683-8541-4e394a880148)
+
+
+- **Response Body**
+  
+![06_2Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/c9821f58-6323-4d1d-ad91-7ecf12bc8555)
+
+</details>
+
+<details>
+<summary>AH-POST-007</summary>
+
+- **Request Header**
+  
+![07_1Request H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/e94128ae-b654-407f-8e74-dedf00c2786c)
+
+
+- **Request Body**
+![07_2Request B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/ecaab777-9092-4dac-9db5-e529521c49d2)
+
+
+- **Response Header**
+
+![07_4Response H](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/8e48d169-4bf5-4411-98c9-7383125660b9)
+
+
+- **Response Body**
+  
+![07_3Response B](https://github.com/4jo-Phoenix/Alcohol_hub/assets/153909291/b82d6892-e24e-4a65-af09-3fd8ec8ae5c0)
+
+</details>
 
 
 </details>
