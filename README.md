@@ -250,7 +250,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 </details>
 
 <details>
-<summary>AH-MEMBER-002</summary>
+<summary>AH-MEMBER-008</summary>
 
 - **Request Header**
 ![08_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/2e512694-5e7d-46e7-81d8-0c70e4f7542b)
