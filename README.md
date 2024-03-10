@@ -142,7 +142,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
  
 
 </details>
-
+<br>
 
 ### 4-2. REST-API Definition
 - **REST-API(Member) Definition Table**
