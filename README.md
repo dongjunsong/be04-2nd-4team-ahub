@@ -106,36 +106,6 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 ---
 
-- **TESTCASE(Post) Definition Table**
-
-<details>
-<summary>Test Result</summary>
- 
-
-</details>
-
----
-
-- **TESTCASE(Reply) Definition Table**
-![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/2497da07-5f6b-47bd-9df6-6cddec4a91e1)
-
-<details>
-<summary>Test Result</summary>
-<br> 
-
-**CRUD** <br>
-
-<img width="702" alt="스크린샷 2024-03-10 오후 9 40 00" src="https://github.com/dongh810/alcohol_test/assets/105986200/904961a1-9346-4c7e-a6ff-ee1e5671fbd2">
-
-**SELECT** <br>
-
-<img width="702" alt="스크린샷 2024-03-10 오후 9 40 09" src="https://github.com/dongh810/alcohol_test/assets/105986200/678f792b-d989-457f-9945-a5441a4419d4">
- 
-
-</details>
-
----
-
 - **TESTCASE(Fair) Definition Table**
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/bcf425b7-a185-4e01-9f76-d0f9666a79d1)
 
@@ -170,6 +140,37 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 
 </details>
+
+---
+
+- **TESTCASE(Reply) Definition Table**
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/2497da07-5f6b-47bd-9df6-6cddec4a91e1)
+
+<details>
+<summary>Test Result</summary>
+<br> 
+
+**CRUD** <br>
+
+<img width="702" alt="스크린샷 2024-03-10 오후 9 40 00" src="https://github.com/dongh810/alcohol_test/assets/105986200/904961a1-9346-4c7e-a6ff-ee1e5671fbd2">
+
+**SELECT** <br>
+
+<img width="702" alt="스크린샷 2024-03-10 오후 9 40 09" src="https://github.com/dongh810/alcohol_test/assets/105986200/678f792b-d989-457f-9945-a5441a4419d4">
+ 
+
+</details>
+
+---
+
+- **TESTCASE(Post) Definition Table**
+
+<details>
+<summary>Test Result</summary>
+ 
+
+</details>
+
 <br>
 
 ### 4-2. REST-API Definition
