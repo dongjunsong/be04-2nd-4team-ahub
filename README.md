@@ -95,12 +95,47 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 ## 4. TEST 
 
 ### 4-1. TESTCASE Definition
-- **TESTCASE Definition Table**
+- **TESTCASE(Member) Definition Table**
 
 <details>
-<summary>Fair Test result</summary>
+<summary>Test Result</summary>
+ 
+
+</details>
+
+- **TESTCASE(Post) Definition Table**
+
+<details>
+<summary>Test Result</summary>
+ 
+
+</details>
+
+- **TESTCASE(Reply) Definition Table**
+
+<details>
+<summary>Test Result</summary>
+ 
+
+</details>
+
+- **TESTCASE(Fair) Definition Table**
+
+<details>
+<summary>Test Result</summary>
+ 
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/844ab5f0-6337-45e7-ad0f-1feff2c3b133)
+
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/896a09d9-553f-4b91-96c8-c172c1c874b2)
+
+</details>
+
+- **TESTCASE(News) Definition Table**
+
+<details>
+<summary>Test Result</summary>
+ 
+
 </details>
 
 
