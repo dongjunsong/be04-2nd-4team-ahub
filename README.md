@@ -211,6 +211,28 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
+<details>
+<summary>AH-REPLY-001</summary>
+
+- **Request Header**
+![스크린샷 2024-03-10 오후 7 32 41](https://github.com/dongh810/alcohol_test/assets/105986200/d68c85e2-ab63-412e-bcaf-f5893d045686)
+
+
+- **Request Body**
+<br> none
+
+
+- **Response Header**
+![스크린샷 2024-03-10 오후 7 33 03](https://github.com/dongh810/alcohol_test/assets/105986200/c43c3763-91c8-4b6c-a80e-5e42a4545d14)
+
+
+- **Response Body**
+![스크린샷 2024-03-10 오후 7 33 18](https://github.com/dongh810/alcohol_test/assets/105986200/3d6ba0df-f559-4ca0-b2ee-27461c5e292c)
+
+
+
+</details>
+
 # 5. 프로젝트 회고
 
 - **백동현** :  
