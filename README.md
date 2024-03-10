@@ -73,7 +73,7 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 프로젝트 설계 항목에서는 프로젝트 기능 구현에 필요한 요구사항 파악과, 해당 요구사항을 구현하기 위한 프로젝트의 설계를 확인할 수 있습니다. 
 
 ## 3-1 요구사항 명세서
-![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/9992df3e-e372-44e4-b8c9-1a6983197ce3)
+![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/c35bf325-8f7f-4afa-9dc5-db1f2e128f85)
     
 ## 3-2. DDD Context map
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/b6a80658-3d07-4161-b46c-78e96c188ae9)
