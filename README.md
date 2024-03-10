@@ -233,6 +233,124 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 
 </details>
 
+<details>
+<summary>AH-MEMBER-001</summary>
+
+- **Request Header**
+![01_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/1dd83fed-5c6c-4706-ac3d-6895c6f61bb6)
+
+- **Response Header**
+![01_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/5f27a935-ed7a-4337-884e-c235429819a9)
+
+- **Response Body**
+![01_GET_findAllmembers](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/88b0f378-5162-4611-be3b-d4ad3703adac)
+
+![01_GET_findAllmembers_2](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/b08b802b-2196-4f61-ba0c-8237b6736019)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-002</summary>
+
+- **Request Header**
+![02_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/aa051b8b-29c6-4041-a073-2343e6489033)
+
+- **Response Header**
+![02_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/0dc9d380-17fc-44c1-abc6-91c1de1d074c)
+
+- **Response Body**
+![02_GET_findBymemberCode](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/2f115a8b-d589-4018-a4f1-36cfeaf8dc2c)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-003</summary>
+
+- **Request Header**
+![03_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/2c075c2e-8ff4-4a19-ae7e-6551c83cece1)
+
+- **Response Header**
+![03_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/7c8205dc-19dc-46ba-8ae2-c6b01b9ee586)
+
+- **Response Body**
+![03_GET_findByMemberId](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/9cfd8947-e85e-45f3-8e49-75d67b07f2fc)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-004</summary>
+
+- **Request Header**
+![04_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/d3a4da21-d87b-4662-b2ff-df8ae07e152d)
+
+- **Response Header**
+![04_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/1cc6b4bf-1858-465e-972a-d02889ccfd27)
+
+- **Response Body**
+![04_GET_findMyProfile](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/317232ae-f488-482b-a33c-5fffc97a3e75)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-005</summary>
+
+- **Request Header**
+![05_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/9129642f-e650-4bb5-885a-b43584af56bc)
+
+- **Response Header**
+![05_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/04e900fb-0288-410d-96fe-2e4e657f57f6)
+
+- **Request Body**
+- **Response Body**
+![05_POST_registMember](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/cb3486d0-dce1-42c8-8f55-62536fb6478f)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-006</summary>
+
+- **Request Header**
+![06_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/3afe8b34-5217-4beb-bc8f-c9bb4587cfa4)
+
+- **Response Header**
+![06_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/aa3c3e0c-07df-496c-86fb-7f2da5b5e431)
+
+- **Request Body**
+- **Response Body**
+![06_POST_login](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/9f419f39-e775-4826-be44-a65a42316c01)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-007</summary>
+
+- **Request Header**
+![07_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/bdfcaf0c-1c21-478e-9928-a5cf7f61ec53)
+
+- **Response Header**
+![07_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/8c2c4fbe-0729-440a-9a15-baa25bf11a95)
+
+- **Request Body**
+- **Response Body**
+![07_PUT_modifyMember](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/241f819c-efb9-4dc8-9449-4f84e70155ed)
+
+</details>
+
+<details>
+<summary>AH-MEMBER-002</summary>
+
+- **Request Header**
+![08_Request_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/2e512694-5e7d-46e7-81d8-0c70e4f7542b)
+
+- **Response Header**
+![08_Response_Header](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/882c5d3e-2d97-4ff8-b6f3-8864f6f60cb3)
+
+- **Request Body**
+- **Response Body**
+![08_DELETE_removeMember](https://github.com/4jo-Phoenix/Alcohol_hub/assets/87284220/c7c7a4f3-c8a5-48ab-9d61-bceb8f47def2)
+
+</details>
+
 # 5. 프로젝트 회고
 
 - **백동현** :  
