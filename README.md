@@ -59,9 +59,13 @@ Ahub 프로젝트의 산출 결과물은 다음과 같습니다.
 
 작업 공간: 서울 동작구 보라매로 SFC빌딩, 원격 소통
 
-기술 스택: 
-MariaDB 10.6, OpenJDK 17.0.7, Spring Boot Framework 3.0.3, Spring security 6 <br>
-Spring Data JPA, MyBatis, Spring Cloud Gateway 
+기술 스택: <img src ="https://img.shields.io/badge/MariaDB-&logo=MariaDB"/><img src="https://img.shields.io/badge/10.6-515151?style=for-the-badge" width="40" height="20"/> <img src="https://img.shields.io/badge/OpenJDK-&logo=openjdk"><img src="https://img.shields.io/badge/17.0.3-515151?style=for-the-badge" width="40" height="20"/>
+<img src ="https://img.shields.io/badge/Spring Boot-&logo=Spring Boot"/><img src="https://img.shields.io/badge/3.0.3-515151?style=for-the-badge" width="50" height="20"/> 
+<img src="https://img.shields.io/badge/Spring Security-&logo=spring security" width="70" height="20"/>
+<img src="https://img.shields.io/badge/Spring Data JPA-&logo=spring data jpa" width="100" height="20"/>
+<img src="https://img.shields.io/badge/MyBatis-&logo=mybatis" width="50" height="20"/>
+<img src="https://img.shields.io/badge/Spring Cloud Gateway-&logo=spring cloud gateway" width="100" height="20"/>
+
 
 ## 2-2  일정관리 (WBS)
 
