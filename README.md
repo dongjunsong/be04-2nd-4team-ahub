@@ -76,17 +76,22 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 ## 3-1 요구사항 명세서
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/c35bf325-8f7f-4afa-9dc5-db1f2e128f85)
     
-## 3-2. DDD Context map
+## 3-2. DDD 
+- Event Storming 
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/8010e804-a156-49aa-bdeb-6b9a92508bb0)
+
+- Bounded Context
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/bad37322-a598-4c3c-9977-cc160471a7b1)
+
+- Context Map
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/b6a80658-3d07-4161-b46c-78e96c188ae9)
 
 
 ## 3-3 DB 모델링
 -  DA# 논리 모델 
-
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/ac63be56-bcb9-4715-921d-21f4c9ccf151)
 
 - DA# 물리 모델
-
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/092dabe3-8721-4ef9-9dbc-d9867ba43579)
 
 ## 3-4 네트워크 아키텍처 
