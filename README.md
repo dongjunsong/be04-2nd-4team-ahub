@@ -754,7 +754,103 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 </details>
 
 
+---
+
+- **REST-API(News) Definition Table**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/a346e044-24a1-41b7-bff2-12b22090ff67)
+
+<details>
+<summary>AH-NEWS-001</summary>
+
+- **Request Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/2d927184-72dc-47b2-9e73-23cffa972532)
+
+- **Request Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/c5ebd1b1-d2ef-41bb-a6a2-d469dde2d5c7)
+
+- **Response Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/bd430bf4-a28b-4860-b378-54118eec7866)
+
+- **Response Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/50ccc6b9-59ad-4e82-8c2d-c774eb8eb266)
+
 </details>
+
+<details>
+<summary>AH-NEWS-002</summary>
+
+- **Request Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/33d7edbf-2911-4c96-8e6b-abf1212cdf96)
+
+- **Request Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/1ee92c23-78d2-4134-a743-f67f78fed6cb)
+
+- **Response Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/20bbe6b1-eb44-41ef-8972-a0484baa242d)
+
+- **Response Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/6b0affa0-b2df-481e-a639-295957249b54)
+
+
+</details>
+
+<details>
+<summary>AH-NEWS-003</summary>
+
+- **Request Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/2278bc58-5e2f-41b5-baf6-54f1d037f2c5)
+
+
+- **Request Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/fde64076-41ad-46a9-919e-9eefeb4feef2)
+
+
+- **Response Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/6a6f7878-ef18-481c-b6a7-67d3331c78ab)
+
+
+- **Response Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/3eff8be9-4ed2-4541-8224-23bc4dc6e4e5)
+
+</details>
+
+<details>
+<summary>AH-NEWS-004</summary>
+
+- **Request Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/93a0c4f9-4dd0-4352-a9df-14f12305d361)
+
+
+- **Request Body**
+<br> none
+
+- **Response Header**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/b0647994-f8ba-4a12-918a-10f97cb02c66)
+
+
+- **Response Body**
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/c7a07d44-542f-4849-aa46-228436b99742)
+
+</details>
+
+<details>
+<summary>AH-NEWS-005</summary>
+
+- **Request Header**
+
+
+- **Request Body**
+
+
+- **Response Header**
+
+
+- **Response Body**
+
+
+</details>
+
+
 
 # 5. 프로젝트 회고
 
