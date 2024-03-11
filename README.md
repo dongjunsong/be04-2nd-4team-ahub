@@ -64,7 +64,8 @@ MariaDB 10.6, OpenJDK 17.0.7, Spring Boot Framework 3.0.3, Spring security 6 <br
 Spring Data JPA, MyBatis, Spring Cloud Gateway 
 
 ## 2-2  일정관리 (WBS)
-![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/3437f986-b25e-4e4f-8947-75a3a5a241d1)
+
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/096d31f2-a412-42ac-9060-40e8ed8ea18d)
 
 <br>
 
