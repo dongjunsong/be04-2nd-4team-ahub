@@ -81,7 +81,8 @@ Ahub 프로젝트의 산출 결과물은 다음과 같습니다.
 ![image](https://github.com/4jo-Phoenix/Alcohol_hub/assets/108782390/c35bf325-8f7f-4afa-9dc5-db1f2e128f85)
     
 ## 3-2. DDD 
-- Event Storming 
+
+- Event Storming <br>
 ![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/8010e804-a156-49aa-bdeb-6b9a92508bb0)
 
 - Bounded Context
@@ -860,7 +861,7 @@ Ahub 프로젝트의 산출 결과물은 다음과 같습니다.
 
 </details>
 
-
+<br>
 
 # 5. 프로젝트 회고
 
