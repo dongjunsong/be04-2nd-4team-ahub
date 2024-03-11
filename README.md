@@ -837,16 +837,16 @@ Spring Data JPA, MyBatis, Spring Cloud Gateway
 <summary>AH-NEWS-005</summary>
 
 - **Request Header**
-
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/ddb28564-3c7e-467a-baa8-cf5809966854)
 
 - **Request Body**
-
+<br> none
 
 - **Response Header**
-
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/9d737e4b-7791-4512-8065-57eca5f90246)
 
 - **Response Body**
-
+![image](https://github.com/beyond-sw-camp/be04-2nd-4team-ahub/assets/108782390/953ba93a-d427-482c-bc3c-cc7dea1d7d42)
 
 </details>
 
